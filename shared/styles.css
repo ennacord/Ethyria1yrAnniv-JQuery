@@ -1,0 +1,324 @@
+/* shared */
+
+body {
+    background-image: url('/img/Artboard_1.png');
+    color: yellow;
+}
+
+div {
+    /* border: 1px solid red; */
+}
+
+.reimu_back img {
+    height: 100px;
+}
+
+.reimu_back:hover {
+    opacity: 0.7;
+}
+
+
+.main {
+    /* border: 6px white dotted; */
+    margin: auto;
+    margin-top: 5vh;
+
+    /* padding: 7px; */
+    padding: 105px;
+
+    /* height: 972px; */
+    /* width: 1728px; */
+
+    height: 864px;
+    width: 1536px;
+
+    background-image: url('../img/bg_main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/* index.html */
+
+.index {
+    /* border: 6px white dotted; */
+    margin: auto;
+    /* margin-top: 5vh; */
+
+    /* height: 56.25vw;
+    width: 100vw; */
+    height: 50.625vw;
+    width: 90vw;
+
+    background-image: url('../img/bg_index.png');
+    background-repeat: no-repeat;
+}
+
+#center_navi_container {
+    height: 100%;
+    display: flex;
+    /* margin: auto; */
+}
+
+#center_navi {
+    height: 100%;
+    margin: auto;
+}
+
+.cell_content {
+    height: 16.875vw;
+    width: 16.875vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+
+.cell_content_w_animation img {
+    /* scale: 1.1; */
+    max-width: 15vw;
+    position:absolute;
+}
+
+.cell_content_w_animation {
+    color: purple;
+    padding: 50px;
+    border-radius: 50%;
+}
+
+
+
+#cns {
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* Message.html */
+#messages_scroll_container {
+    padding: 0 00px;
+    height: 80%;
+}
+
+#message_scroll {
+    /* border: 6px solid blue; */
+    /* max-height: calc(90vh - 300px); */
+    height: 100%;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+#message_scroll::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 9999px;
+}
+
+#message_scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(183, 189, 231);
+    border-radius: 9999px;
+}
+
+#message_scroll::-webkit-scrollbar-track {
+    /* background-color: #1e2530; */
+    background-color: hsla(0, 0%, 100%, .7);
+    border-radius: 9999px;
+}
+
+
+
+
+#message_list {
+    /* border: 3px solid green; */
+
+    margin: auto;
+    display: flexbox;
+
+}
+
+
+
+
+
+
+.card {
+    text-align: start;
+
+    /* color: black; */
+    /* background: rgba(183, 189, 231); */
+    margin: 10px;
+    width: 400px;
+
+
+    white-space: pre-line;
+    font-weight: 700;
+    padding: 5px 10px;
+
+    display: inline-block;
+}
+
+.card_text {
+    z-index: 2;
+    white-space: pre-line;
+    font-weight: 700;
+    padding: 5px 10px;
+    /* background-color: hsla(0, 0%, 100%, .7); */
+    border-radius: 10px;
+    position: relative;
+
+    overflow-y: auto;
+    height: 220px;
+
+}
+
+.card_text::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 9999px;
+}
+
+.card_text::-webkit-scrollbar-thumb {
+    background-color: #7E4EAC;
+    border-radius: 9999px;
+}
+
+.card_text::-webkit-scrollbar-track {
+    background-color: #1e2530;
+    border-radius: 9999px;
+}
+
+
+
+.card_aloupeep {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -30px;
+    right: -10px;
+    z-index: 1;
+    background-size: contain;
+}
+
+
+
+
+
+#message_navi_container {
+    height: 20%;
+}
+
+
+#message_navi {
+    /* height: 200px; */
+    height: 100%;
+    /* width: 40vh; */
+    margin: auto;
+    display: flex;
+
+    text-align: center;
+}
+
+
+#message_navi_home {
+    width: 40vh;
+    text-align: center;
+    margin: auto;
+}
+
+#message_navi_home img {
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #messages_scroll_container {
+        padding: 0 10px;
+    }
+
+    #message_scroll::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 9999px;
+    }
+
+
+    .card_text {
+        height: 100%;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* projects.html */
+.test {
+    width: 90vh;
+}
+
+
+/* credits.html*/
+#credits_main {}
+
+
+.ui-widget-content {
+    /* background: none; */
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+
+/* Twitter */
+.fa-twitter {
+    background: blue;
+    color: white;
+}
+
+/* Youtube */
+.fa-youtube {
+    background: red;
+    color: white;
+}
+
+/* Github */
+.fa-github {
+    background: black;
+    color: white;
+}
+
+/* Ko-Fi */
+.fa-coffee {
+    background: white;
+    color: red;
+}

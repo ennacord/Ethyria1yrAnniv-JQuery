@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethyria 1yr</title>
+
+
+
+
+    <link rel="stylesheet" href="./shared/bootstrap.min.css">
+    <script src="./shared/jquery-3.6.1.min.js"></script>
+
+    <script src="./shared/bootstrap.bundle.min.js" defer></script>
+
+    <link rel="stylesheet" href="./shared/styles.css">
+
+
+
+</head>
+
+<body>
+    <div class="index" style="background-size: 120vw; background-position: center;">
+        <div id="center_navi_container" class="">
+            <div id="center_navi" class="">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="cell_content">
+                                1<a href="./messages.html">message</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell_content cell_content_w_animation" id="btn_e">
+                                <img src="./img/enna_round_2.png">
+                                <img src="./img/enna_round_1.png">
+                        </td>
+                        <td>
+                            <div class="cell_content">
+                                3<a href="./aggie.html">aggie</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cell_content cell_content_w_animation" id="btn_m">
+                                <img src="./img/millie_round_2.png">
+                                <img src="./img/millie_round_1.png">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell_content" style="overflow:visible ;">
+                                <img src="./img/ethyria1yr_logo.png" style="max-width: 18vw;">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell_content cell_content_w_animation" id="btn_n">
+                                <img src="./img/nina_round_2.png">
+                                <img src="./img/nina_round_1.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cell_content">
+                                7<a href="./projects.html">projects</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell_content cell_content_w_animation" id="btn_r">
+                                <img src="./img/reimu_round_2.png">
+                                <img src="./img/reimu_round_1.png">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell_content">
+                                9<a href="./magazine.html">magazine</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div id="cns" class="">
+                CREDITS & SOCIALS &nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="./credits.html"><img src="./img/Credits button.png"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="./social.html"><img src="./img/Socials button.png"></a>
+            </div>
+        </div>
+
+        <!-- <div id="cns" class="" onclick="history.pushState({}, '', './credits.html');"> -->
+
+
+    </div>
+
+
+    <script>
+        const CONSTANTS = [
+            {   // Enna
+                v: 'e',
+                nav_btn_path: ['enna_round_1.png', 'enna_round_2.png'],
+            },
+            {   // Millie
+                v: 'm',
+                nav_btn_path: ['millie_round_1.png', 'millie_round_2.png'],
+            },
+            {   // Nina
+                v: 'n',
+                nav_btn_path: ['nina_round_1.png', 'nina_round_2.png'],
+
+            },
+            {   // Reimu
+                v: 'r',
+                nav_btn_path: ['reimu_round_1.png', 'reimu_round_2.png'],
+            }
+        ];
+
+        $(".cell_content_w_animation").hover(
+            function () {
+                $(this).css({
+                    "border": "red solid 8px",
+                    // "background-image": 'url("./img/' + CONSTANTS.find(constant => {
+                    //     return constant.v == $(this).attr('id').slice(-1)
+                    // })['nav_btn_path'][1] + '")'
+                });
+            },
+            function () {
+                $(this).css({
+                    "border": "",
+                });
+                // CONSTANTS.forEach(constant => {
+                //     $('#btn_' + constant.v).css('background-image', 'url("./img/' + constant.nav_btn_path[0] + '")');
+                //     // careful, no error message here, because callback?
+                // });
+            }
+        );
+
+        // $('#btn_e').on('click', () => {
+        //     $('#title').before('<div id = "pusher"></div>');
+        //     $('#title').animate({
+        //         height: "-=100"
+        //     }, 200, () => {
+        //         $('#pusher').animate({
+        //             height: "+=2500"
+        //         }, 300, () => {
+        //             location.href = './messages.html';
+        //             // window.open( './messages.html', '_blank');   // open in new tab
+        //         })
+        //     })
+        // });
+
+        // $('#btn_r').on('click', () => {
+        //     $('#title').before('<div id = "pusher"></div>');
+        //     $('#cns').after('<div id = "pusher2"></div>');
+        //     $('#title').animate({
+        //         height: "+=100"
+        //     }, 200, () => {
+        //         $('#title').slideUp(100, () => {
+        //             $('#center_navi').slideUp(100, () => {
+        //                 $('#cns').slideUp(100, () => {
+        //                     location.href = './magazine.html';
+        //                 });
+        //             });
+        //         });
+        //     })
+        // });
+
+
+        // $('#btn_n').on('click', () => {
+        //     $('#center_navi').animate({
+        //         'margin-right': '30%'
+        //     }, 200, () => {
+        //         $('#title').animate({
+        //             'margin-left': '-100%'
+        //         }, 100, () => {
+        //             $('#center_navi').animate({
+        //                 'margin-left': '-100%'
+        //             }, 100, () => {
+        //                 $('#cns').animate({
+        //                     'margin-right': '100%'
+        //                 }, 100, () => {
+        //                     location.href = './aggie.html';
+        //                 })
+        //             })
+        //         })
+        //     })
+        // });
+
+        // // kinda make-shift
+        // $('#btn_m').on('click', () => {
+        //     $('#center_navi').animate({
+        //         'margin-left': '30%'
+        //     }, 200, () => {
+        //         $('#cns').animate({
+        //             'margin-right': '-100%'
+        //         }, 100, () => {
+        //             $('#center_navi').animate({
+        //                 'margin-left': '100%'
+        //             }, 100, () => {
+        //                 $('#title').animate({
+        //                     'margin-left': '100%'
+        //                 }, 100, () => {
+        //                     location.href = './projects.html';
+        //                 })
+        //             })
+        //         })
+        //     })
+        // });
+
+
+    </script>
+
+
+</body>
+
+</html>

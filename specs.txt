@@ -1,0 +1,33 @@
+NEED:
+    title art at home page
+    different page for social and credits? their buttons go where?
+    the pallets, what color goes where specifically
+    Gonza mentioned better design for message cards?
+    project page layout
+    
+
+
+MIE TO DO
+
+    general:
+        reimu back position
+
+        dynamic size  (for most desktop)
+    
+    message.html :
+        scroll bar change with .changeV
+        card background (2) vs card text color confirm
+
+        emergency JSON portal
+
+        read indicator
+
+
+    credits.html
+        scroll bar style
+        many many styles...
+
+        jquery collapseable sections
+
+    
+    

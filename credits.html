@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credits</title>
+
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="./shared/bootstrap.min.css">
+    <script src="./shared/jquery-3.6.1.min.js"></script>
+
+    <script src="./shared/bootstrap.bundle.min.js" defer></script>
+
+    <link rel="stylesheet" href="./shared/styles.css">
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <div class="main">
+        no special charater allowed for contributor.name
+
+        <div id="credits_container" style="color: white;max-height: 100%;overflow-y: scroll"></div>
+
+        <div id="cns" class="">
+            BACK &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../" class="reimu_back"> <img src="./img/reimu_back.png"> </a>
+        </div>
+    </div>
+
+    <script>
+        fetch("./data/credits/credits.json")
+            .then(response => response.json())
+            .then(data => {
+                const departments = data['departments'];
+                departments.map(department => {
+                    $('#credits_container').append(
+                        $('<div><h3>' + department.department + '</h3></div>')
+                            .addClass('credit_department')
+                            .attr('id', department.department)
+                            .css({
+                                'display': 'flexbox'
+                            })
+                    );
+                    department['contributors'].map(contributor => { // like cards
+                        $('#' + department.department)
+                            .css({
+                                'margin': '20px'
+                            })
+                            .append(
+                                $('<div></div>')
+                                    .addClass('credits_contributor_container').css({
+                                        'margin': '20px',
+                                        'text-align': 'center',
+                                        'display': 'inline-block',
+                                        'padding': '10px',
+
+                                        'width': '250px',
+                                        'background-color': contributor.bgcolor,
+
+                                        'background-image': 'url("' + data['pfp_paths'] + contributor.bgimg + '")',
+                                        "background-size": 'contain',
+                                        'background-repeat': 'no-repeat',
+
+                                        'border': 'solid 5px ' + (!contributor.border && 'white'),
+                                    })
+                                    .append(
+                                        $('<div></div>').css({
+                                            'padding': '10px',
+                                            // 'border': 'solid 5px ' + contributor.border,
+                                        })
+                                            .append(
+                                                $('<div></div>')
+                                                    .addClass('credits_contributor_pfp')
+                                                    .css(
+                                                        {
+                                                            'margin': 'auto',
+                                                            'border-radius': '50%',
+                                                            'height': '100px',
+                                                            'width': '100px',
+                                                            'background-image': 'url("' + data['pfp_paths'] + contributor.pfp + '")',
+                                                            'background-repeat': 'no-repeat',
+                                                            'background-size': '100px'
+                                                        }
+                                                    )
+                                            )
+                                            .append(
+                                                $('<div><h4>' + contributor.name + '<h4/></div>')
+                                                    .addClass('credits_contributor_name')
+                                            )
+                                            .append(
+                                                $('<div></div>')
+                                                    .addClass('credits_contributor_intro')
+                                                    .text(contributor['intro'])
+                                            )
+                                            .append(
+                                                $('<div></div>')
+                                                    .addClass('credits_contributor_contacts')
+                                                    .attr('id', contributor.name.replaceAll(' ', '_'))
+
+                                            )
+                                    )
+                            );
+                        contributor['contacts'].map(contact => {
+                            $('#' + contributor.name.replaceAll(' ', '_'))
+                                .append(
+                                    $('<a></a>')
+                                        .addClass('fa fa-' + contact['platform'])
+                                        .attr('href', contact['href'])
+                                        .css({
+                                            'margin': '5px'
+                                        })
+                                )
+                        })
+                    })
+                })
+
+            })
+
+    </script>
+
+</body>
+
+</html>

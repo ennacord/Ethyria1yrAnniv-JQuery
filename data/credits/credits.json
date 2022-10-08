@@ -1,0 +1,144 @@
+{
+  "pfp_paths": "./data/credits/pfps/",
+  "icon_paths": "./platform_icons/",
+  "platforms": [
+    {
+      "name": "github",
+      "icon": "GitHub-Mark-64px.png"
+    }
+  ],
+  "departments": [
+    {
+      "department": "Aggie-Board",
+      "contributors": [
+        {
+          "name": "Bettiepop",
+          "intro": "I just doodle and vibe c:",
+          "pfp": "bettiepop_pfp.png",
+          "border":  "rgba(51,37,73,1)",
+          "bgcolor":  "rgba(109,169,157,1)",
+          "bgimg":  "bettiepop_background.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/bettiepop" }
+          ]
+        }
+      ]
+    },
+    {
+      "department": "Dev",
+      "contributors": [
+        {
+          "name": "sample name 1",
+          "intro": "I can do xx",
+          "pfp": "01.png",
+          "contacts": [
+            { "platform": "github", "personal_link": "https://github.com" },
+            { "platform": "twitter", "personal_link": "https://twitter.com" },
+            { "platform": "youtube", "href": "https://youtube.com" }
+          ]
+        },
+        {
+          "name": "Dealoux",
+          "intro": "",
+          "pfp": "16.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "github", "href": "https://github.com/dealoux" }
+          ]
+        },
+        {
+          "name": "Alpaka",
+          "intro": "React, Spring Boot, Pandas",
+          "pfp": "alpaka.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "github", "href": "https://github.com/AlphaBud75" }
+          ]
+        },
+        {
+          "name": "Jetri",
+          "intro": "VueJS",
+          "pfp": "07.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/jetri_co" },
+            { "platform": "github", "href": "https://github.com/dragonjet" }
+          ]
+        }
+      ]
+    },
+    {
+      "department": "Management",
+      "contributors": [
+        {
+          "name": "Matahari",
+          "intro": "Arts, Cosplay",
+          "pfp": "matahari.jpg",
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/mataharigoreng"
+            },
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/channel/UCNjtRqxra6cZ27uUuP5x5HQ"
+            },
+            { "platform": "coffee", "href": "https://ko-fi.com/mataharigoreng" }
+          ]
+        },
+        {
+          "name": "Prof Nobu",
+          "intro": "Photoshop",
+          "pfp": "nobu.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/nobu_okt" }
+          ]
+        }
+      ]
+    },
+    {
+      "department": "UI",
+      "contributors": [
+        {
+          "name": "GonzaGKX",
+          "intro": "I simp",
+          "pfp": "gonza.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/GonzaGKX" }
+          ]
+        }
+      ]
+    },
+    {
+      "department": "Art",
+      "contributors": [
+        {
+          "name": "sample name 4",
+          "intro": "I can do xx",
+          "pfp": "09.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "github", "href": "https://github.com" }
+          ]
+        },
+        {
+          "name": "sample name 5",
+          "intro": "I can do xx",
+          "pfp": "10.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "github", "href": "https://github.com" }
+          ]
+        },
+        {
+          "name": "sample name 6",
+          "intro": "I can do xx",
+          "pfp": "11.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "github", "href": "https://github.com" }
+          ]
+        }
+      ]
+    }
+  ]
+}

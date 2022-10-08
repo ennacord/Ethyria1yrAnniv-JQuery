@@ -1,0 +1,112 @@
+<div id="#scroll-number">
+    <div id="#div1">
+
+    </div>
+
+
+    <li><a href="#a2">Scroll to Section Two</a></li>
+    <li><a href="#a3">Scroll to Section Three</a></li>
+
+    <div id="aggieBoard">ag</div>
+    <div id="connecting">co</div>
+    <div id="messageBoard">msg
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+        <div class="messageCard"></div>
+
+    </div>
+    <div id="fashionZine">fm</div>
+    <div id="vnTrailer">vn</div>
+    <div id="gameTrailer">gt</div>
+    <div id="donationCampaign">dc</div>
+    <div id="credit">cts</div>
+
+
+    <div id="a1">a1</div>
+    <div id="a2">a2</div>
+    <div id="a3">a3</div>
+    <div id="a4">a4</div>
+
+
+
+    <style>
+        #messageBoard {
+            margin: auto;
+            width: 70%;
+        }
+
+        .messageCard {
+            border: 5px solid yellow;
+            height: 200px;
+            width: 45%;
+            display: inline-block;
+            align-items: center;
+        }
+
+        #scroll-number {
+            position: fixed;
+            right: 5px;
+            /*newly added*/
+            top: 5px;
+            /*newly added*/
+            float: right;
+        }
+    </style>
+
+    <script>
+
+        
+
+$(window).scroll(function () {
+    $("#scroll-number").text($(window).scrollTop());
+    //The code below is to make sure the #scrolling-div stays in view of the user as they scroll 
+    if (
+        $(window).scrollTop()
+        >
+        $("#div1").position().top
+        &&
+        $(window).scrollTop()
+        <
+        ($("#div1").position().top + 4000)
+    ) {
+        $("#scrolling-div").css("position", "fixed");
+    } else {
+        $("#scrolling-div").css("position", "absolute");
+    }
+});
+
+
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+
+
+
+$(".messageCard").click(function () {
+    // alert('asdf')
+})
+
+// let offset_top =  $(window).scrollTop() ;
+// $('#offset_dynamic').text('offset: '+ offset_top);
+
+
+    </script>

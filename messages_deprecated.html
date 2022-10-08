@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+
+
+    <link rel="stylesheet" href="./shared/bootstrap.min.css">
+    <script src="./shared/jquery-3.6.1.min.js"></script>
+
+    <script src="./shared/bootstrap.bundle.min.js" defer></script>
+
+    <link rel="stylesheet" href="./shared/styles.css">
+
+    <!-- <script src="./shared/scripts.js" defer></script> -->
+
+    <!-- !!! this lib sucks -->
+    <!-- masonry grid for message cards -->
+    <!-- <script src="./js/masonry.pkgd.min.js" async></script> -->
+
+</head>
+
+<body>
+
+    <a href="../" class="reimu_back">
+        <img src="./img/reimu_back.png">
+    </a>
+    <div class="main">
+
+        <div id="messages_scroll_container">
+
+            <div id="message_scroll">
+                <div id="message_list" class="overflow-auto"> </div>
+            </div>
+
+        </div>
+
+        <div class="row-sm " id="message_navi_container">
+            <div class="row-sm " id="message_navi">
+                <div id="changeV_e" class="changeV d-inline col-sm" onclick="changeV('e')" style="background-image: url('./img/enna_square_1.png'); 
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                    data-clicked='false'>
+                </div>
+                <div id="changeV_m" class="changeV d-inline col-sm" onclick="changeV('m')" style="background-image: url('./img/enna_square_1.png');
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                    data-clicked='false'>
+                </div>
+                <div id="changeV_n" class="changeV d-inline col-sm" onclick="changeV('n')" style="background-image: url('./img/nina_square_1.png'); 
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                    data-clicked='false'>
+                </div>
+                <div id="changeV_r" class="changeV d-inline col-sm" onclick="changeV('r')" style="background-image: url('./img/reimu_square_1.png'); 
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                    data-clicked='false'>
+                </div>
+            </div>
+            <!-- <div id="message_navi_home" onclick="location.href='./'">
+                <img src="./onetofour.png">
+            </div> -->
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        // get param from url(no appearnt benefit) , or click everytime(faster?)
+        const CONSTANTS = [
+            {   // Enna
+                v: 'e',
+                nav_btn_path: ['enna_square_1.png', 'enna_square_2.png'],
+                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna6m.json',
+                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna6m.json',
+                avators_path: './img_temp/card_aloupeep/',
+                avators: [
+                    'aloupeep-01.png', 'aloupeep-02.png', 'aloupeep-art.png',
+                    'aloupeep-cb.png', 'aloupeep-fh.png', 'aloupeep-ld.png',
+                    'aloupeep-ms.png', 'aloupeep-rich.png', 'aloupeep-slp.png',
+                    'aloupeep-td.png', 'aloupeep-wave.png', 'aloupeep-wiz.png'
+                ],
+                pallet: {
+                    main: 'rgba(216,161,236)',
+                    card_bi_color: [
+                        'rgba(207,140,255)',
+                        'rgba(234,207,204)'
+                    ],
+                    five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
+                    text: 'rgba(0,0,0)'
+                }
+            },
+            {   // Millie
+                v: 'm',
+                nav_btn_path: ['enna_square_1.png', 'enna_square_2.png'],
+                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/millie6m.json',
+                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/millie6m.json',
+                avators_path: './img_temp/card_aloupeep/',
+                pallet: {
+                    main: 'rgba(255,197,82)',
+                    card_bi_color: [
+                        'rgba(235,182,104)',
+                        'rgba(37,43,58)'
+                    ],
+                    five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
+                    text: 'rgba(255,255,255)'
+                }
+            },
+            {   // Nina
+                v: 'n',
+                nav_btn_path: ['nina_square_1.png', 'nina_square_2.png'],
+                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/nina6m.json',
+                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/nina6m.json',
+                avators_path: './img_temp/card_aloupeep/',
+                pallet: {
+                    main: 'rgba(175,34,34)',
+                    card_bi_color: [
+                        'rgba(227,54,54)',
+                        'rgba(174,172,204)'
+                    ],
+                    five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
+                    text: 'rgba(255,255,255)'
+                }
+
+            },
+            {   // Reimu
+                v: 'r',
+                nav_btn_path: ['reimu_square_1.png', 'reimu_square_2.png'],
+                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/reimu6m.json',
+                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/reimu6m.json',
+                avators_path: './img_temp/card_aloupeep/',
+                pallet: {
+                    main: 'rgba(235,72,143)',
+                    card_bi_color: [
+                        'rgba(63,71,92)',
+                        'rgba(186,0,81)'
+                    ],
+                    five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
+                    text: 'rgba(255,255,255)'
+                }
+            }
+        ];
+
+
+        $('.changeV').hover(
+            function () {
+                $(this).css("opacity", "0.6");
+            },
+            function () {
+                $(this).css("opacity", "");
+            }
+        );
+
+        $('.changeV').click(
+            function () {
+                $('.changeV').css({
+                    'border': 'none'
+                });
+                CONSTANTS.forEach(constant => {
+                    $('#changeV_' + constant.v).css('background-image', 'url("./img/' + constant.nav_btn_path[0] + '")');
+                    // careful, no error message here, because callback?
+                });
+                $(this).css({
+                    "border": "transparent  solid 15px",
+                    "background-image": 'url("./img/' + CONSTANTS.find(constant => {
+                        return constant.v == $(this).attr('id').slice(-1)
+                    })['nav_btn_path'][1] + '")',
+                });
+            }
+        );
+
+        // maybe download all 4 json then just switch....
+        // async fetch
+        function changeV(v) {
+
+            $('#changeV_' + v).css({
+                "border": "transparent  solid 20px",
+                "background-image": 'url("./img/' + CONSTANTS.find(constant => {
+                    return constant.v == v
+                })['nav_btn_path'][1] + '")',
+            });
+
+            let constant = CONSTANTS.find(e => { return e.v == v });
+
+            $('#message_list').empty();
+
+            $('#message_list').append(
+                $.getJSON(constant.old_url, function (result) {
+
+                    switch (v) {
+
+                        case 'm': { // millie json different
+                            // console.log(v);
+                            for (var obj in result['messages']) {
+                                let e = result['messages'][obj]
+                                $('#message_list')
+                                    .prepend(
+                                        $('<div></div>').addClass('card').css({
+                                            'background-color': constant.pallet.card_bi_color[0],
+                                            'color': constant.pallet.text
+                                        })
+                                            .append(
+                                                $('<div>' + e.name + '</div>').addClass('card_name')
+                                            )
+                                            .append(
+                                                $('<div>' + e.message + '<br>' + e.time + '</div>').addClass('card_text')
+                                                    .css({
+                                                        'background-color': constant.pallet.card_bi_color[1]
+                                                    })
+                                            )
+                                            .append(
+                                                v == 'e' && //only Enna has little aloupeep avatars
+                                                $('<div></div>').addClass('card_aloupeep')
+                                                    .css(
+                                                        'background-image',
+                                                        'url("' +
+                                                        constant.avators_path +
+                                                        constant.avators[Math.floor(Math.random() * constant.avators.length)] +
+                                                        '")'
+                                                    )
+                                            )
+                                    );
+                            }
+                            break
+                        };
+
+                        default: {
+                            result['messages'].forEach(
+                                (e) => {
+                                    $('#message_list')
+                                        .prepend(
+                                            $('<div></div>').addClass('card').css({
+                                                'background-color': constant.pallet.card_bi_color[0],
+                                                'color': constant.pallet.text
+                                            })
+                                                .append(
+                                                    $('<div>' + e.name + '</div>').addClass('card_name')
+                                                )
+                                                .append(
+                                                    $('<div>' + e.message + '<br>' + e.time + '</div>').addClass('card_text')
+                                                        .css({
+                                                            'background-color': constant.pallet.card_bi_color[1],
+                                                            'color': constant.pallet.text
+                                                        })
+                                                )
+                                                .append(
+                                                    v == 'e' && //only Enna has little aloupeep avatars
+                                                    $('<div></div>').addClass('card_aloupeep').css(
+                                                        'background-image',
+                                                        'url("' +
+                                                        constant.avators_path +
+                                                        constant.avators[Math.floor(Math.random() * constant.avators.length)] +
+                                                        '")'
+                                                    )
+                                                )
+                                        );
+                                }
+                            )
+
+                        }
+                    }
+
+
+                })
+            );
+
+
+
+        }
+
+        changeV(['e', 'm', 'n', 'r'][Math.floor(Math.random() * 4)]);
+
+
+    </script>
+
+</body>
+
+</html>
