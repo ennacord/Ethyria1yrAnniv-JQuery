@@ -75,15 +75,7 @@
             {   // Enna
                 v: 'e',
                 nav_btn_path: ['enna_square_1.png', 'enna_square_2.png'],
-                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna6m.json',
-                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna6m.json',
-                avators_path: './img_temp/card_aloupeep/',
-                avators: [
-                    'aloupeep-01.png', 'aloupeep-02.png', 'aloupeep-art.png',
-                    'aloupeep-cb.png', 'aloupeep-fh.png', 'aloupeep-ld.png',
-                    'aloupeep-ms.png', 'aloupeep-rich.png', 'aloupeep-slp.png',
-                    'aloupeep-td.png', 'aloupeep-wave.png', 'aloupeep-wiz.png'
-                ],
+                card_bg_path: 'EnnaCard.png',
                 pallet: {
                     main: 'rgba(216,161,236)',
                     card_bi_color: [
@@ -97,9 +89,7 @@
             {   // Millie
                 v: 'm',
                 nav_btn_path: ['millie_square_1.png', 'millie_square_2.png'],
-                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/millie6m.json',
-                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/millie6m.json',
-                avators_path: './img_temp/card_aloupeep/',
+                card_bg_path: 'MillieCard.png',
                 pallet: {
                     main: 'rgba(255,197,82)',
                     card_bi_color: [
@@ -107,15 +97,13 @@
                         'rgba(37,43,58)'
                     ],
                     five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
-                    text: 'rgba(255,255,255)'
+                    text: 'rgba(0,0,0)'
                 }
             },
             {   // Nina
                 v: 'n',
                 nav_btn_path: ['nina_square_1.png', 'nina_square_2.png'],
-                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/nina6m.json',
-                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/nina6m.json',
-                avators_path: './img_temp/card_aloupeep/',
+                card_bg_path: 'NinaCard.png',
                 pallet: {
                     main: 'rgba(175,34,34)',
                     card_bi_color: [
@@ -123,16 +111,14 @@
                         'rgba(174,172,204)'
                     ],
                     five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
-                    text: 'rgba(255,255,255)'
+                    text: 'rgba(0,0,0)'
                 }
 
             },
             {   // Reimu
                 v: 'r',
                 nav_btn_path: ['reimu_square_1.png', 'reimu_square_2.png'],
-                old_url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/reimu6m.json',
-                url: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/reimu6m.json',
-                avators_path: './img_temp/card_aloupeep/',
+                card_bg_path: 'ReimuCard.png',
                 pallet: {
                     main: 'rgba(235,72,143)',
                     card_bi_color: [
@@ -140,20 +126,12 @@
                         'rgba(186,0,81)'
                     ],
                     five: ['rgba()', 'rgba()', 'rgba()', 'rgba()', 'rgba()'],
-                    text: 'rgba(255,255,255)'
+                    text: 'rgba(0,0,0)'
                 }
             }
         ];
 
-        let messages = [1, 2];
 
-        fetch("./data/messages/csvjson.json")
-            .then(response => response.json())
-            .then(data => {
-                messages.push(message);
-            });
-
-        console.log(messages);
 
 
 
@@ -194,96 +172,70 @@
                     return constant.v == v
                 })['nav_btn_path'][1] + '")',
             });
-
-            let constant = CONSTANTS.find(e => { return e.v == v });
-
             $('#message_list').empty();
 
-            $('#message_list').append(
-                $.getJSON(constant.old_url, function (result) {
+            fetch("./data/messages/csvjson.json")
+                .then(response => response.json())
+                .then(messages => {
+                    messages.filter(message => {
+                        return v.toLowerCase() == message['v'].toLowerCase().charAt(0)
+                    }).forEach(e => {
+                        // console.log(filtered_message);
 
-                    switch (v) {
+                        $('#message_list')
+                            .append(
 
-                        case 'm': { // millie json different
-                            // console.log(v);
-                            for (var obj in result['messages']) {
-                                let e = result['messages'][obj]
-                                $('#message_list')
-                                    .prepend(
-                                        $('<div></div>').addClass('card').css({
-                                            'background-color': constant.pallet.card_bi_color[0],
-                                            'color': constant.pallet.text
-                                        })
-                                            .append(
-                                                $('<div>' + e.name + '</div>').addClass('card_name')
-                                            )
-                                            .append(
-                                                $('<div>' + e.message + '<br>' + e.time + '</div>').addClass('card_text')
-                                                    .css({
-                                                        'background-color': constant.pallet.card_bi_color[1]
-                                                    })
-                                            )
-                                            .append(
-                                                v == 'e' && //only Enna has little aloupeep avatars
-                                                $('<div></div>').addClass('card_aloupeep')
-                                                    .css(
-                                                        'background-image',
-                                                        'url("' +
-                                                        constant.avators_path +
-                                                        constant.avators[Math.floor(Math.random() * constant.avators.length)] +
-                                                        '")'
-                                                    )
-                                            )
-                                    );
-                            }
-                            break
-                        };
+                                $('<div></div>').addClass('card').css({
+                                    'background-image': 'url("./img/' + CONSTANTS.find(constant => {
+                                        return constant.v == v
+                                    })['card_bg_path'] + '")',
+                                    'background-color': 'transparent',
 
-                        default: {
-                            result['messages'].forEach(
-                                (e) => {
-                                    $('#message_list')
-                                        .prepend(
-                                            $('<div></div>').addClass('card').css({
-                                                'background-color': constant.pallet.card_bi_color[0],
-                                                'color': constant.pallet.text
+                                    'background-size': 'contain',
+                                    'background-position': 'center',
+                                    'background-repeat': 'no-repeat',
+
+                                    'color': CONSTANTS.find(constant => {
+                                        return constant.v == v
+                                    }).pallet.text
+                                })
+                                    .append(
+                                        $('<div>' + e.name + '</div>').addClass('card_name')
+                                    )
+                                    .append(
+                                        $('<div>' + e.message + '<br>' + e.Timestamp + '</div>').addClass('card_text')
+                                            .css({
+                                                // 'background-color': constant.pallet.card_bi_color[1]
                                             })
-                                                .append(
-                                                    $('<div>' + e.name + '</div>').addClass('card_name')
-                                                )
-                                                .append(
-                                                    $('<div>' + e.message + '<br>' + e.time + '</div>').addClass('card_text')
-                                                        .css({
-                                                            'background-color': constant.pallet.card_bi_color[1],
-                                                            'color': constant.pallet.text
-                                                        })
-                                                )
-                                                .append(
-                                                    v == 'e' && //only Enna has little aloupeep avatars
-                                                    $('<div></div>').addClass('card_aloupeep').css(
-                                                        'background-image',
-                                                        'url("' +
-                                                        constant.avators_path +
-                                                        constant.avators[Math.floor(Math.random() * constant.avators.length)] +
-                                                        '")'
-                                                    )
-                                                )
-                                        );
-                                }
+                                    )
+                                    .append(
+                                        $('<div></div>').addClass('read_indicator')
+                                            .css(
+                                                'background-image',
+                                                'url("./img/cardMark.png")'
+                                            )
+                                    )
+
+
                             )
-
-                        }
-                    }
-
-
+                    })
                 })
-            );
+
+
+        };
 
 
 
-        }
+
 
         changeV(['e', 'm', 'n', 'r'][Math.floor(Math.random() * 4)]);
+
+
+
+        $('.read_indicator').on('click', function () {
+            alert($(this).html());
+        });
+
 
 
     </script>

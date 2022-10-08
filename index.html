@@ -29,7 +29,7 @@
                     <tr>
                         <td>
                             <div class="cell_content">
-                                1<a href="./messages.html">message</a>
+                                <!-- 1<a href="./messages.html">message</a> -->
                             </div>
                         </td>
                         <td>
@@ -39,7 +39,7 @@
                         </td>
                         <td>
                             <div class="cell_content">
-                                3<a href="./aggie.html">aggie</a>
+                                <!-- 3<a href="./aggie.html">aggie</a> -->
                             </div>
                         </td>
                     </tr>
@@ -64,7 +64,7 @@
                     <tr>
                         <td>
                             <div class="cell_content">
-                                7<a href="./projects.html">projects</a>
+                                <!-- 7<a href="./projects.html">projects</a> -->
                             </div>
                         </td>
                         <td>
@@ -75,7 +75,7 @@
                         </td>
                         <td>
                             <div class="cell_content">
-                                9<a href="./magazine.html">magazine</a>
+                                <!-- 9<a href="./magazine.html">magazine</a> -->
                             </div>
                         </td>
                     </tr>
@@ -84,7 +84,7 @@
 
 
             <div id="cns" class="">
-                CREDITS & SOCIALS &nbsp;&nbsp;&nbsp;&nbsp; 
+                CREDITS & SOCIALS &nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="./credits.html"><img src="./img/Credits button.png"></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="./social.html"><img src="./img/Socials button.png"></a>
@@ -121,7 +121,7 @@
         $(".cell_content_w_animation").hover(
             function () {
                 $(this).css({
-                    "border": "red solid 8px",
+                    "opacity": "0.7",
                     // "background-image": 'url("./img/' + CONSTANTS.find(constant => {
                     //     return constant.v == $(this).attr('id').slice(-1)
                     // })['nav_btn_path'][1] + '")'
@@ -129,7 +129,7 @@
             },
             function () {
                 $(this).css({
-                    "border": "",
+                    "opacity": "",
                 });
                 // CONSTANTS.forEach(constant => {
                 //     $('#btn_' + constant.v).css('background-image', 'url("./img/' + constant.nav_btn_path[0] + '")');
@@ -138,77 +138,68 @@
             }
         );
 
-        // $('#btn_e').on('click', () => {
-        //     $('#title').before('<div id = "pusher"></div>');
-        //     $('#title').animate({
-        //         height: "-=100"
-        //     }, 200, () => {
-        //         $('#pusher').animate({
-        //             height: "+=2500"
-        //         }, 300, () => {
-        //             location.href = './messages.html';
-        //             // window.open( './messages.html', '_blank');   // open in new tab
-        //         })
-        //     })
-        // });
+        $('#btn_e').on('click', () => {
+            $('#center_navi').animate({
+                'margin-top': '-100px'
+            }, 200, () => {
+                $('#center_navi').animate({
+                    'margin-top': '1000px'
+                }, 300, () => {
+                    location.href = './messages.html';
+                    // location.href = './';
+                    // window.open( './messages.html', '_blank');   // open in new tab
+                })
+            })
+        });
 
-        // $('#btn_r').on('click', () => {
-        //     $('#title').before('<div id = "pusher"></div>');
-        //     $('#cns').after('<div id = "pusher2"></div>');
-        //     $('#title').animate({
-        //         height: "+=100"
-        //     }, 200, () => {
-        //         $('#title').slideUp(100, () => {
-        //             $('#center_navi').slideUp(100, () => {
-        //                 $('#cns').slideUp(100, () => {
-        //                     location.href = './magazine.html';
-        //                 });
-        //             });
-        //         });
-        //     })
-        // });
+        $('#btn_r').on('click', () => {
+            $('#center_navi').animate({
+                'margin-top': '100px'
+            }, 200, () => {
+                $('#center_navi').animate({
+                    'margin-top': '-1000px'
+                }, 300, () => {
+                    location.href = './magazine.html';
+                    // location.href = './';
+                })
+            })
+        });
+
+        $('#btn_n').on('click', () => {
+            $('#center_navi').animate({
+                'margin-right': '500px'
+            }, 200, () => {
+                $('#center_navi').animate({
+                    'margin-right': '-1000px'
+                }, 300, () => {
+                    location.href = './aggie.html';
+                    // location.href = './';
+                })
+            })
+        });
 
 
-        // $('#btn_n').on('click', () => {
-        //     $('#center_navi').animate({
-        //         'margin-right': '30%'
-        //     }, 200, () => {
-        //         $('#title').animate({
-        //             'margin-left': '-100%'
-        //         }, 100, () => {
-        //             $('#center_navi').animate({
-        //                 'margin-left': '-100%'
-        //             }, 100, () => {
-        //                 $('#cns').animate({
-        //                     'margin-right': '100%'
-        //                 }, 100, () => {
-        //                     location.href = './aggie.html';
-        //                 })
-        //             })
-        //         })
-        //     })
-        // });
+        $('#btn_m').on('click', () => {
+            $('#center_navi').animate({
+                'margin-left': '500px'
+            }, 200, () => {
+                $('#center_navi').animate({
+                    'margin-left': '-1000px'
+                }, 300, () => {
+                    location.href = './projects.html';
+                    // location.href = './';
+                })
+            })
+        });
 
-        // // kinda make-shift
-        // $('#btn_m').on('click', () => {
-        //     $('#center_navi').animate({
-        //         'margin-left': '30%'
-        //     }, 200, () => {
-        //         $('#cns').animate({
-        //             'margin-right': '-100%'
-        //         }, 100, () => {
-        //             $('#center_navi').animate({
-        //                 'margin-left': '100%'
-        //             }, 100, () => {
-        //                 $('#title').animate({
-        //                     'margin-left': '100%'
-        //                 }, 100, () => {
-        //                     location.href = './projects.html';
-        //                 })
-        //             })
-        //         })
-        //     })
-        // });
+        $('#cns > a').hover(
+            function () {
+                $(this).css("opacity", "0.6")
+            },
+            function () {
+                $(this).css("opacity", "")
+            }
+        )
 
 
     </script>
