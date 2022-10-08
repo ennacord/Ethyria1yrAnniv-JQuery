@@ -60,14 +60,15 @@
             </div> -->
         </div>
 
+    </div>
+
+    <div id="cns_wrapper" class="">
         <div id="cns" class="">
             BACK &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="../" class="reimu_back"> <img src="./img/reimu_back.png"> </a>
         </div>
+
     </div>
-
-
-
 
     <script>
         // get param from url(no appearnt benefit) , or click everytime(faster?)
@@ -103,7 +104,7 @@
             {   // Nina
                 v: 'n',
                 nav_btn_path: ['nina_square_1.png', 'nina_square_2.png'],
-                card_bg_path: 'NinaCard.png',
+                card_bg_path: 'NinaCard3.png',
                 pallet: {
                     main: 'rgba(175,34,34)',
                     card_bi_color: [
@@ -118,7 +119,7 @@
             {   // Reimu
                 v: 'r',
                 nav_btn_path: ['reimu_square_1.png', 'reimu_square_2.png'],
-                card_bg_path: 'ReimuCard.png',
+                card_bg_path: 'ReimuCard3.png',
                 pallet: {
                     main: 'rgba(235,72,143)',
                     card_bi_color: [
@@ -197,24 +198,50 @@
 
                                     'color': CONSTANTS.find(constant => {
                                         return constant.v == v
-                                    }).pallet.text
+                                    }).pallet.text,
+
+
+                                    "padding": function () {
+                                        switch (v) {
+                                            case 'r':
+                                                return " 5px 5px 7px 5px"
+                                                break;
+                                            case 'n':
+                                                return " 35px 20px 10px 20px"
+                                                break;
+                                            case 'e':
+                                                return " 35px 20px 10px 20px"
+                                                break;
+                                            case 'm':
+                                                return " 35px 20px 10px 20px"
+                                                break;
+
+                                        }
+                                    }
+
+
                                 })
                                     .append(
-                                        $('<div>' + e.name + '</div>').addClass('card_name')
+                                        $('<div>' + e.name + '</div>').addClass('card_name').css({
+                                            "color": "white",
+                                            "font-weight": "500",
+                                            "text-align": 'center'
+                                        })
                                     )
                                     .append(
-                                        $('<div>' + e.message + '<br>' + e.Timestamp + '</div>').addClass('card_text')
+                                        $('<div >' + e.message + '<br><br><br>' + e.Timestamp + '</div>').addClass('card_text')
                                             .css({
-                                                // 'background-color': constant.pallet.card_bi_color[1]
+                                                "margin": function () { (v == 'r') && " 1px 5px 7px 5px" },
+                                                "border": function () { (v == 'r') && " #d0c9c7 6px solid" }
                                             })
                                     )
-                                    .append(
-                                        $('<div></div>').addClass('read_indicator')
-                                            .css(
-                                                'background-image',
-                                                'url("./img/cardMark.png")'
-                                            )
-                                    )
+                                // .append(
+                                //     $('<div></div>').addClass('read_indicator')
+                                //         .css(
+                                //             'background-image',
+                                //             'url("./img/cardMark.png")'
+                                //         )
+                                // )
 
 
                             )
@@ -228,7 +255,8 @@
 
 
 
-        changeV(['e', 'm', 'n', 'r'][Math.floor(Math.random() * 4)]);
+        changeV(['n'][Math.floor(Math.random() * 1)]);
+        // changeV(['e', 'm', 'n', 'r'][Math.floor(Math.random() * 4)]);
 
 
 
