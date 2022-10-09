@@ -311,12 +311,7 @@
           "contacts": [
             { "platform": "twitter", "href": "https://twitter.com/mono_luca" }
           ]
-        }
-      ]
-    },
-    {
-      "department": "Message_Card_Design",
-      "contributors": [
+        },
         {
           "name": "鈴片しぞ",
           "intro": "Illustrator and comics artist, mostly character-focused",
@@ -336,7 +331,12 @@
           "name": "RileyA",
           "intro": "Millie's illustration <br>I sketch my fave vtubers",
           "pfp": "riley.png",
-          "contacts": [{ "platform": "twitter", "href": "https://twitter.com/ReimusMongrel" }]
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/ReimusMongrel"
+            }
+          ]
         },
         {
           "name": "Luca ",
