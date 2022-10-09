@@ -55,14 +55,14 @@
                             $('<div class="mb-4">'
                                 + '<button class="btn btn-light" type="button" data-toggle="collapse" '
                                 + 'data-target="#' + department.department + '" aria-expanded="false" aria-controls="collapseTwo">'
-                                + '<h4>' + department.department + '</h4></button>'
+                                + '<h4>' + department.department.replaceAll('_', ' ') + ' ( click to fold/unfold )</h4></button>'
                                 + '<div>')
                         )
                         .append(
                             $('<div>'
                                 + '</div>')
                                 .addClass('credit_department collapse ' +
-                                    (department.department == 'Management-Site' ? 'show' : 'show')
+                                    (['Site_-_Management', 'CONNECTING_-_Project_Lead_and_Project_Manager'].includes(department.department) ? 'show' : 'collapsed')
                                 )
                                 .attr({ 'id': department.department, "data-parent": "#credits_container" })
                                 .css({
@@ -86,12 +86,12 @@
                                         "background-size": 'contain',
                                         'background-repeat': 'no-repeat',
                                         'background-position': 'center',
-                                        
+
                                         'border': 'solid 3px white',
                                         // 'border': 'solid 3px ' + (contributor.border ? 'none' : 'white'),
                                         'background-color': contributor.name == 'Bettiepop' && contributor.bgcolor,
                                         'background-image': contributor.name == 'Bettiepop' && 'url("' + data['pfp_paths'] + contributor.bgimg + '")',
-                                        
+
                                     })
                                     .append(
                                         $('<div></div>').css({
@@ -105,7 +105,7 @@
                                                         {
                                                             'margin': 'auto',
                                                             'border-radius': '50%',
-                                                            'height': contributor.pfp &&'100px',
+                                                            'height': contributor.pfp && '100px',
                                                             'width': '100px',
                                                             'background-image': 'url("' + data['pfp_paths'] + contributor.pfp + '")',
                                                             'background-repeat': 'no-repeat',
@@ -126,7 +126,7 @@
                                                 $('<div></div>')
                                                     .addClass('credits_contributor_contacts')
                                                     .attr('id', contributor.name.replaceAll(' ', '_'))
-                                                    
+
 
                                             )
                                     )
@@ -136,7 +136,7 @@
                                 .append(
                                     $('<a></a>')
                                         .addClass('fa fa-' + contact['platform'])
-                                        .attr('href', contact['href'])
+                                        .attr({ 'href': contact['href'], "target": "_blank" })
                                         .css({
                                             'margin': '5px',
                                         })

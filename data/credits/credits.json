@@ -9,7 +9,7 @@
   ],
   "departments": [
     {
-      "department": "Management-Site",
+      "department": "Site_-_Management",
       "contributors": [
         {
           "name": "Prof Nobu",
@@ -39,17 +39,22 @@
       ]
     },
     {
-      "department": "CONNECTING-Project-Lead-Project-Manager",
+      "department": "CONNECTING_-_Project_Lead_and_Project_Manager",
       "contributors": [
-        {"name": "MatahariGoreng", "pfp": "matahari.jpg","contacts": [{"platform": "twitter","href": "https://twitter.com/mataharigoreng"}]},
+        {"name": "MatahariGoreng", "pfp": "matahari.jpg","intro":"Project_Lead","contacts": [{"platform": "twitter","href": "https://twitter.com/mataharigoreng"}]},
         {"name":"Bettiepop","pfp":"bettiepop_pfp.png","contacts":[{ "platform": "twitter", "href": "https://twitter.com/bettiepop" }],
-          "border": "rgba(51,37,73,1)","bgcolor": "rgba(109,169,157,1)","bgimg": "bettiepop_background.jpg"},
-        {"name":"Chu2neko","pfp":"cuni.jpg","contacts":[{ "platform":"twitter","href":"https://twitter.com/chu2neko"}]}
-
+        "intro": "Project_Manager <br> I just doodle and vibe c:","border": "rgba(51,37,73,1)","bgcolor": "rgba(109,169,157,1)","bgimg": "bettiepop_background.jpg"},
+        {"name":"Chu2neko","pfp":"cuni.jpg","intro":"Project Manager","contacts":[{ "platform":"twitter","href":"https://twitter.com/chu2neko"}]},
+        {
+          "name": " jetrico",
+          "intro": "Small thanks to Jetrico__ for initiating this project back in February and Enna's Angelic Teahouse mods also being supportive & helpful behind the scenes.",
+          "pfp": "jetri.jpg",
+          "contacts": []
+        }
       ]
     },
     {
-      "department":"CONNECTING-Vocalists",
+      "department":"CONNECTING_-_Vocalists",
       "contributors":[
         {"name":"Senno","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/SeSeSenno"}]},
         {"name":"Bettiepop ","pfp":"","contacts":[{ "platform": "twitter", "href": "https://twitter.com/bettiepop" }]},
@@ -87,7 +92,7 @@
       ]
     },
     {
-      "department":"CONNECTING-MV-StoryBoard",
+      "department":"CONNECTING_-_MV_StoryBoard",
       "contributors":[
         {"name":"Mana","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/manamm_art"}]},
         {"name":"Hazel","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/HazelSokolov"}]},
@@ -96,7 +101,7 @@
       ]
     },
     {
-      "department":"CONNECTING-Artists",
+      "department":"CONNECTING_-_Artists",
       "contributors":[
         {"name":"Ino","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/inolccp"}]},
         {"name":"Ikaarus","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/_ikaanaide_"}]},
@@ -112,21 +117,21 @@
       ]
     },
     {
-      "department":"CONNECTING-Video",
+      "department":"CONNECTING_-_Video",
       "contributors":[
         {"name":"Stellia","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/stelli_a"}]},
         {"name":"Lance","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/atomicxlancer"}]}
       ]
     },
     {
-      "department":"CONNECTING-Clips_in_Video",
+      "department":"CONNECTING_-_Clips_in_Video",
       "contributors":[
         {"name":"Orangehenge","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Alpha_Hatsuseno"}]},
         {"name":"Ennas","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/EnnaVirus"}]}
       ]
     },
     {
-      "department":"CONNECTING-Teaser",
+      "department":"CONNECTING_-_Teaser",
       "contributors":[
         {"name":"reF","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/UguyRananif"}]},
         {"name":"Vince ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]}
@@ -134,14 +139,14 @@
       ]
     },
     {
-      "department":"CONNECTING-Mix",
+      "department":"CONNECTING_-_Mix",
       "contributors":[
         {"name":" Vince","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]},
         {"name":"Breeziness","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/itsbreeziness"}]}
       ]
     },
     {
-      "department":"CONNECTING-Harmony_guide",
+      "department":"CONNECTING_-_Harmony_guide",
       "contributors":[
         {"name":"Sasu ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Sasu_Crow"}]},
         {"name":" Vince ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]}
@@ -149,25 +154,25 @@
       ]
     },
     {
-      "department":"CONNECTING-Youtube_Subtittles",
+      "department":"CONNECTING_-_Youtube_Subtittles",
       "contributors":[
         {"name":"JDaniel","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/jdanielo64"}]}
       ]
     },
     {
-      "department":"CONNECTING-Translyrics",
+      "department":"CONNECTING_-_Translyrics",
       "contributors":[
 
       ]
     },
     {
-      "department":"CONNECTING-Cheerleader",
+      "department":"CONNECTING_-_Cheerleader",
       "contributors":[
         {"name":"Heko","pfp":"","contacts":[]}
       ]
     },
     {
-      "department": "Aggie_Board_Aritists",
+      "department": "Aggie_Board_-_Aritists",
       "contributors": [
         {
           "name": "Gummy Bear",
@@ -179,7 +184,6 @@
         },
         {
           "name": " Bettiepop ",
-          "intro": "I just doodle and vibe c:",
           "pfp": "bettiepop_pfp.png",
           
           "contacts": [
@@ -313,7 +317,7 @@
       ]
     },
     {
-      "department": "Dev",
+      "department": "Site_-_Dev",
       "contributors": [
         {
           "name": "Dealoux",
@@ -348,7 +352,7 @@
       ]
     },
     {
-      "department": "UI",
+      "department": "Site_-_UI",
       "contributors": [
         {
           "name": "cipher4109",
@@ -392,7 +396,7 @@
       ]
     },
     {
-      "department": "Art",
+      "department": "Others",
       "contributors": [
         {
           "name": "sample name 4",
@@ -400,6 +404,7 @@
           "pfp": "",
           "contacts": [
             { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "youtube", "href": "https://youtube.com" },
             { "platform": "github", "href": "https://github.com" }
           ]
         }

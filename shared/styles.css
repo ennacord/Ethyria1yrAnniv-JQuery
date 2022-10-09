@@ -6,7 +6,7 @@ body {
 }
 
 div {
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .reimu_back img {
@@ -53,6 +53,18 @@ div {
     margin-bottom: 5vh;
     margin-right: 5vw;
 }
+
+.changeV {
+    height: 150px;
+}
+
+
+
+
+
+
+
+
 
 
 
