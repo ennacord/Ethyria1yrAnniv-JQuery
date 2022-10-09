@@ -44,29 +44,31 @@
     <div class="row-sm " id="message_navi_container">
         <div class="row-sm " id="message_navi">
             <div id="changeV_e" class="changeV d-inline col-sm" onclick="changeV('e')" style="background-image: url('./img/enna_square_1.png'); 
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                data-clicked='false'>
+                    background-size:contain; background-repeat: no-repeat; background-position: center; " data-clicked='false'>
             </div>
             <div id="changeV_m" class="changeV d-inline col-sm" onclick="changeV('m')" style="background-image: url('./img/millie_square_1.png');
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                data-clicked='false'>
+                    background-size:contain; background-repeat: no-repeat; background-position: center; " data-clicked='false'>
             </div>
             <div id="changeV_n" class="changeV d-inline col-sm" onclick="changeV('n')" style="background-image: url('./img/nina_square_1.png'); 
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                data-clicked='false'>
+                    background-size:contain; background-repeat: no-repeat; background-position: center; " data-clicked='false'>
             </div>
             <div id="changeV_r" class="changeV d-inline col-sm" onclick="changeV('r')" style="background-image: url('./img/reimu_square_1.png'); 
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                data-clicked='false'>
+                    background-size:contain; background-repeat: no-repeat; background-position: center; " data-clicked='false'>
             </div>
         </div>
     </div>
 
-    
+    <div id="message_navi_home">
+        <img src="./data/credits/sample_pfp/14.png" style="
+            width: 100%;
+            max-height: 100%;">
+    </div>
+
+
     <div id="cns_wrapper" class="">
         <div id="cns" class="">
             BACK &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="javascript:history.back()"  class="reimu_back"> <img src="./img/reimu_back3.png"> </a>
+            <a href="javascript:history.back()" class="reimu_back"> <img src="./img/reimu_back3.png"> </a>
         </div>
     </div>
 
@@ -166,6 +168,7 @@
         // maybe download all 4 json then just switch....
         // async fetch
         function changeV(v) {
+            let read_indicator_id = 0;
 
             $('#changeV_' + v).css({
                 "border": "transparent  solid 20px",
@@ -186,40 +189,42 @@
                         $('#message_list')
                             .append(
 
-                                $('<div></div>').addClass('card').css({
-                                    'background-image': 'url("./img/' + CONSTANTS.find(constant => {
-                                        return constant.v == v
-                                    })['card_bg_path'] + '")',
-                                    'background-color': 'transparent',
+                                $('<div></div>').addClass('card')
+                                    .attr({ 'id': ++read_indicator_id })
+                                    .css({
+                                        'background-image': 'url("./img/' + CONSTANTS.find(constant => {
+                                            return constant.v == v
+                                        })['card_bg_path'] + '")',
+                                        'background-color': 'transparent',
 
-                                    'background-size': 'cover',
-                                    'background-position': 'center',
-                                    'background-repeat': 'no-repeat',
+                                        'background-size': 'cover',
+                                        'background-position': 'center',
+                                        'background-repeat': 'no-repeat',
 
-                                    'position': 'relative',
+                                        'position': 'relative',
 
-                                    'color': CONSTANTS.find(constant => {
-                                        return constant.v == v
-                                    }).pallet.text,
+                                        'color': CONSTANTS.find(constant => {
+                                            return constant.v == v
+                                        }).pallet.text,
 
-                                    "padding": function () {
-                                        switch (v) {
-                                            case 'r':
-                                                return " 2px 5px 7px 5px"
-                                                break;
-                                            case 'n':
-                                                return " 30px 61px 37px 61px"
-                                                break;
-                                            case 'e':
-                                                return " 25px 27px 7px 41px"
-                                                break;
-                                            case 'm':
-                                                return " 23px 42px 7px 42px"
-                                                break;
+                                        "padding": function () {
+                                            switch (v) {
+                                                case 'r':
+                                                    return " 2px 5px 7px 5px"
+                                                    break;
+                                                case 'n':
+                                                    return " 30px 61px 37px 61px"
+                                                    break;
+                                                case 'e':
+                                                    return " 25px 27px 7px 41px"
+                                                    break;
+                                                case 'm':
+                                                    return " 23px 42px 7px 42px"
+                                                    break;
+                                            }
                                         }
-                                    }
 
-                                })
+                                    })
                                     .append(
                                         $('<div>' + e.name + '</div>').addClass('card_name').css({
                                             "color": function () {
@@ -352,7 +357,9 @@
                                                 'top': '0px',
                                                 'right': '0px',
                                                 'z-index': '1',
-                                                'background-size': 'contain'
+                                                'background-size': 'contain',
+
+                                                "display": 'none'
                                             })
                                     )
                                 // .append(
@@ -396,43 +403,57 @@
                     })
                 })
 
-            $('.card_text::-webkit-scrollbar-thumb').css({
-                "background-color": function () {
-                    switch (v) {
-                        case 'r':
-                            return
-                            break;
-                        case 'n':
-                            return
-                            break;
-                        case 'e':
-                            return
-                            break;
-                        case 'm':
-                            return "black"
-                            break;
-                    }
-                },
-            });
+            $('div').on('click', function (event) {
+                // console.log(event.target);
+                let t = event.target;
+                while (t.className != 'card') {
+                    t = t.parentNode
+                }
+                // console.log(t.id);
+                // console.log(t);
+                // console.log($('#' + t.id + '.card'));
+                // console.log($('#' + t.id + '.card > .read_indicator'))
+                $('#' + t.id + '.card > .read_indicator').toggle();
+                return false;
+            })
 
-            $('.card_text::-webkit-scrollbar-thumb').css({
-                "background-color": function () {
-                    switch (v) {
-                        case 'r':
-                            return
-                            break;
-                        case 'n':
-                            return
-                            break;
-                        case 'e':
-                            return
-                            break;
-                        case 'm':
-                            return "yellow"
-                            break;
-                    }
-                },
-            });
+            // $('.card_text::-webkit-scrollbar-thumb').css({
+            //     "background-color": function () {
+            //         switch (v) {
+            //             case 'r':
+            //                 return
+            //                 break;
+            //             case 'n':
+            //                 return
+            //                 break;
+            //             case 'e':
+            //                 return
+            //                 break;
+            //             case 'm':
+            //                 return "black"
+            //                 break;
+            //         }
+            //     },
+            // });
+
+            // $('.card_text::-webkit-scrollbar-thumb').css({
+            //     "background-color": function () {
+            //         switch (v) {
+            //             case 'r':
+            //                 return
+            //                 break;
+            //             case 'n':
+            //                 return
+            //                 break;
+            //             case 'e':
+            //                 return
+            //                 break;
+            //             case 'm':
+            //                 return "yellow"
+            //                 break;
+            //         }
+            //     },
+            // });
 
 
 

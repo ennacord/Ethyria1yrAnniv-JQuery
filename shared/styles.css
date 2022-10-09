@@ -159,6 +159,7 @@ div {
 #messages_scroll_container {
     padding: 0 00px;
     height: 100%;
+    
 }
 
 #message_scroll {
@@ -262,13 +263,13 @@ div {
 
 #message_navi_container {
     height: 20%;
+    width: 1536px;
+    margin: auto;
 }
 
 
 #message_navi {
-    /* height: 200px; */
-    height: 100%;
-    /* width: 40vh; */
+    
     margin: auto;
     display: flex;
 
@@ -277,18 +278,13 @@ div {
 
 
 #message_navi_home {
-    width: 40vh;
-    text-align: center;
+    width: 1536px;
+    height: 100px;
+    /* text-align: center; */
     margin: auto;
 }
 
-#message_navi_home img {
-    max-width: inherit;
-    max-height: inherit;
-    height: inherit;
-    width: inherit;
-    object-fit: contain;
-}
+
 
 
 
@@ -510,16 +506,18 @@ div {
     overflow-y: scroll;
 }
 
-#project_col3_dashed {
+.project_col3_dashed {
     display: inline-block;
     position: relative;
     background-color: #5a3872;
     border-radius: 20px;
     border: dashed 7px white;
     padding: 7px;
+
+    margin-bottom: 100vh;
 }
 
-#project_col3_dotted {
+.project_col3_dotted {
     height: 100%;
     width: 100%;
     border: dotted 4px white;
@@ -527,15 +525,14 @@ div {
     padding: 70px;
 }
 
-#project_col3_content{
+.project_col3_content{
     /* border: red 3px dotted; */
-
     text-align: center;
 }
 
 
 
-#embed_container {
+.embed_container {
     /* border: yellow 2px solid; */
     width: 100%;
     height: 100%;
@@ -545,8 +542,21 @@ div {
 
 #project_col4 {
     width: 3vw;
+    border: solid red 3px;
+    padding-top: 1vh;
+}
+.dot {
+    width: 3vh;
+    height: 3vh;
+    margin: auto;
+    margin-top: 1vh;
+    text-align: center;
+    border: solid red 3px;
+    border-radius: 100%;
 }
 #project_col5 {
+    border: solid red 3px;
+
     width: 9vw;
     height: 90vh;
 

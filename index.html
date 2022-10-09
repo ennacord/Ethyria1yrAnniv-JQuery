@@ -33,9 +33,10 @@
                             </div>
                         </td>
                         <td>
-                            <div class="cell_content cell_content_w_animation" id="btn_e">
-                                <img src="./img/enna_round_2.png">
-                                <img src="./img/enna_round_1.png">
+                            <div class="cell_content" id="btn_e"
+                            style="background-image: url(./img/enna_round_2.png); background-repeat: no-repeat; background-position: center;">
+                                <!-- <img src="./img/enna_round_2.png"> -->
+                                <img class="cell_content_w_animation" src="./img/enna_round_1.png">
                         </td>
                         <td>
                             <div class="cell_content">
@@ -45,9 +46,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="cell_content cell_content_w_animation" id="btn_m">
-                                <img src="./img/millie_round_2.png">
-                                <img src="./img/millie_round_1.png">
+                            <div class="cell_content" id="btn_m"
+                            style="background-image: url(./img/millie_round_2.png); background-repeat: no-repeat; background-position: center;">
+                                <!-- <img src="./img/millie_round_2.png"> -->
+                                <img class="cell_content_w_animation" src="./img/millie_round_1.png">
                             </div>
                         </td>
                         <td>
@@ -56,9 +58,10 @@
                             </div>
                         </td>
                         <td>
-                            <div class="cell_content cell_content_w_animation" id="btn_n">
-                                <img src="./img/nina_round_2.png">
-                                <img src="./img/nina_round_1.png">
+                            <div class="cell_content" id="btn_n"
+                            style="background-image: url(./img/nina_round_2.png); background-repeat: no-repeat; background-position: center;">
+                                <!-- <img src="./img/nina_round_2.png"> -->
+                                <img class="cell_content_w_animation" src="./img/nina_round_1.png">
                         </td>
                     </tr>
                     <tr>
@@ -68,9 +71,10 @@
                             </div>
                         </td>
                         <td>
-                            <div class="cell_content cell_content_w_animation" id="btn_r">
-                                <img src="./img/reimu_round_2.png">
-                                <img src="./img/reimu_round_1.png">
+                            <div class="cell_content" id="btn_r"
+                            style="background-image: url(./img/reimu_round_2.png); background-repeat: no-repeat; background-position: center;">
+                                <!-- <img src="./img/reimu_round_2.png"> -->
+                                <img class="cell_content_w_animation" src="./img/reimu_round_1.png">
                             </div>
                         </td>
                         <td>
@@ -102,6 +106,7 @@
 
 
     <script>
+
         const CONSTANTS = [
             {   // Enna
                 v: 'e',
@@ -125,20 +130,13 @@
         $(".cell_content_w_animation").hover(
             function () {
                 $(this).css({
-                    "opacity": "0.7",
-                    // "background-image": 'url("./img/' + CONSTANTS.find(constant => {
-                    //     return constant.v == $(this).attr('id').slice(-1)
-                    // })['nav_btn_path'][1] + '")'
+                    "opacity": "0.0",
                 });
             },
             function () {
                 $(this).css({
                     "opacity": "",
                 });
-                // CONSTANTS.forEach(constant => {
-                //     $('#btn_' + constant.v).css('background-image', 'url("./img/' + constant.nav_btn_path[0] + '")');
-                //     // careful, no error message here, because callback?
-                // });
             }
         );
 
@@ -151,7 +149,8 @@
                 }, 300, () => {
                     location.href = './messages.html';
                     // location.href = './';
-                    // window.open( './messages.html', '_blank');   // open in new tab
+                }).animate({
+                    "margin-top": ''
                 })
             })
         });
@@ -163,39 +162,43 @@
                 $('#center_navi').animate({
                     'margin-top': '-1000px'
                 }, 300, () => {
-                    
                     location.href = './magazine.html';
                     // location.href = './';
+                }).animate({
+                    "margin-top": ''
                 })
             })
         });
 
         $('#btn_n').on('click', () => {
-            $('#center_navi').animate({
-                'margin-right': '500px'
-            }, 200, () => {
-                $('#center_navi').animate({
-                    'margin-right': '-1000px'
-                }, 300, () => {
-                    location.href = './projects.html';
-
-                    // location.href = './';
-                })
-            })
+            // $('#center_navi').animate({
+            //     'margin-right': '-=250px'
+            // }, 200, () => {
+            //     $('#center_navi').animate({
+            //         'margin-right': '+=750px'
+            //     }, 300, () => {
+            location.href = './projects.html';
+            // location.href = './';
+            //     }).animate({
+            //         "margin-right": "-=500px"
+            //     })
+            // })
         });
 
 
         $('#btn_m').on('click', () => {
-            $('#center_navi').animate({
-                'margin-left': '500px'
-            }, 200, () => {
-                $('#center_navi').animate({
-                    'margin-left': '-1000px'
-                }, 300, () => {
-                    location.href = './aggie.html';
-                    // location.href = './';
-                })
-            })
+            // $('#center_navi').animate({
+            //     'margin-left': '-=250px'
+            // }, 200, () => {
+            //     $('#center_navi').animate({
+            //         'margin-left': '+=750px'
+            //     }, 300, () => {
+            location.href = './aggie.html';
+            // location.href = './';
+            //     }).animate({
+            //         "margin-left": "-=500px"
+            //     })
+            // })
         });
 
         $('#cns > a').hover(
