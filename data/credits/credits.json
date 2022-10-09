@@ -9,66 +9,16 @@
   ],
   "departments": [
     {
-      "department": "Aggie-Board",
-      "contributors": [
-        {
-          "name": "Bettiepop",
-          "intro": "I just doodle and vibe c:",
-          "pfp": "bettiepop_pfp.png",
-          "border":  "rgba(51,37,73,1)",
-          "bgcolor":  "rgba(109,169,157,1)",
-          "bgimg":  "bettiepop_background.jpg",
-          "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com/bettiepop" }
-          ]
-        }
-      ]
-    },
-    {
-      "department": "Dev",
-      "contributors": [
-        {
-          "name": "sample name 1",
-          "intro": "I can do xx",
-          "pfp": "01.png",
-          "contacts": [
-            { "platform": "github", "personal_link": "https://github.com" },
-            { "platform": "twitter", "personal_link": "https://twitter.com" },
-            { "platform": "youtube", "href": "https://youtube.com" }
-          ]
-        },
-        {
-          "name": "Dealoux",
-          "intro": "",
-          "pfp": "16.png",
-          "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com" },
-            { "platform": "github", "href": "https://github.com/dealoux" }
-          ]
-        },
-        {
-          "name": "Alpaka",
-          "intro": "React, Spring Boot, Pandas",
-          "pfp": "alpaka.png",
-          "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com" },
-            { "platform": "github", "href": "https://github.com/AlphaBud75" }
-          ]
-        },
-        {
-          "name": "Jetri",
-          "intro": "VueJS",
-          "pfp": "07.png",
-          "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com/jetri_co" },
-            { "platform": "github", "href": "https://github.com/dragonjet" }
-          ]
-        }
-      ]
-    },
-    {
       "department": "Management",
       "contributors": [
+        {
+          "name": "Prof Nobu",
+          "intro": "Graphic Design & Art",
+          "pfp": "nobu.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/nobu_okt" }
+          ]
+        },
         {
           "name": "Matahari",
           "intro": "Arts, Cosplay",
@@ -86,11 +36,191 @@
           ]
         },
         {
-          "name": "Prof Nobu",
-          "intro": "Photoshop",
-          "pfp": "nobu.jpg",
+          "name": "GonzaGKX",
+          "intro": "I simp",
+          "pfp": "gonza.jpg",
           "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com/nobu_okt" }
+            { "platform": "twitter", "href": "https://twitter.com/GonzaGKX" }
+          ]
+        }
+      ]
+    },
+    {
+      "department": "Aggie-Board",
+      "contributors": [
+        {
+          "name": "Gummy Bear",
+          "intro": "<br>",
+          "pfp": "O5uknx8g_400x400.png",
+          "contacts": [
+            { "platform": "twitter", "href": " https://twitter.com/quanxb" }
+          ]
+        },
+        {
+          "name": "Bettiepop",
+          "intro": "I just doodle and vibe c:",
+          "pfp": "bettiepop_pfp.png",
+          "border": "rgba(51,37,73,1)",
+          "bgcolor": "rgba(109,169,157,1)",
+          "bgimg": "bettiepop_background.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/bettiepop" }
+          ]
+        },
+        {
+          "name": "Pauline08",
+          "intro": "<br>",
+          "pfp": "5fUV7g-L_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": " https://twitter.com/PauRose08" }
+          ]
+        },
+        {
+          "name": "PinkTea",
+          "intro": "<br>",
+          "pfp": "PIv3EyUV_400x400.jpg",
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/ThePinkKnight2"
+            }
+          ]
+        },
+        {
+          "name": "Newt",
+          "intro": "<br>",
+          "pfp": "llHtQfo-_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": " https://twitter.com/whootnewt" }
+          ]
+        },
+        {
+          "name": "Luxx",
+          "intro": "<br>",
+          "pfp": "IhOuV6qS_400x400.jpg",
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/monster24601"
+            }
+          ]
+        },
+        {
+          "name": "KimdredSD",
+          "intro": "<br>",
+          "pfp": "tDiXaJxA_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/KimdredSD" }
+          ]
+        },
+        {
+          "name": "Fungi_V",
+          "intro": "<br>",
+          "pfp": "36WEUB_Q_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/fungi_v" }
+          ]
+        },
+        {
+          "name": "Rynn Birb",
+          "intro": "<br>",
+          "pfp": "qKkVpZ_s_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": " https://twitter.com/Rynn_Birb" }
+          ]
+        },
+        {
+          "name": "Arkiang",
+          "intro": "<br>",
+          "pfp": "JsojJf4p_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/arkiang_owo" }
+          ]
+        },
+        {
+          "name": "Waka",
+          "intro": "<br>",
+          "pfp": "jsQxiwV9_400x400.jpg",
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": " https:/twitter.com/yugaoooooooo"
+            }
+          ]
+        },
+        {
+          "name": "Frank",
+          "intro": "<br>",
+          "pfp": "L8x8xO_0_400x400.png",
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": "https://mobile.twitter.com/Franku_04"
+            }
+          ]
+        },
+        {
+          "name": "Norenche",
+          "intro": "<br>",
+          "pfp": "4Bs9uoms_400x400.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/Norenche" }
+          ]
+        },
+        {
+          "name": "Nini",
+          "intro": "<br>",
+          "pfp": "yPZi2i2A_400x400.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/nini__lette" }
+          ]
+        },
+        {
+          "name": "Pasteru",
+          "intro": "<br>",
+          "pfp": "AZhQDogT_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/PasteruP" }
+          ]
+        },
+        {
+          "name": "Xie",
+          "intro": "<br>",
+          "pfp": "c5OLP9M3_400x400.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/dedshork" }
+          ]
+        }
+      ]
+    },
+    {
+      "department": "Dev",
+      "contributors": [
+        {
+          "name": "Dealoux",
+          "intro": "<br>",
+          "pfp": "dealoux.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/dealoux" },
+            { "platform": "github", "href": "https://github.com/dealoux" }
+          ]
+        },
+        {
+          "name": "Alpaka",
+          "intro": "React, Spring Boot, Pandas",
+          "pfp": "alpaka.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com" },
+            { "platform": "github", "href": "https://github.com/AlphaBud75" }
+          ]
+        },
+        {
+          "name": "Jetri",
+          "intro": "VueJS",
+          "pfp": "jetri.jpg",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/jetri_co" },
+            { "platform": "github", "href": "https://github.com/dragonjet" }
           ]
         }
       ]
@@ -99,11 +229,42 @@
       "department": "UI",
       "contributors": [
         {
-          "name": "GonzaGKX",
-          "intro": "I simp",
-          "pfp": "gonza.jpg",
+          "name": "cipher4109",
+          "intro": "The main content box design Character and splash artist",
+          "pfp": "cipher4109.png",
           "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com/GonzaGKX" }
+            { "platform": "twitter", "href": "https://twitter.com/cipher4109" }
+          ]
+        },
+        {
+          "name": "Kei",
+          "intro": "draws once every blue moon",
+          "pfp": "kei.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/Keichupiko" },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/keichupiko"
+            }
+          ]
+        },
+        {
+          "name": "Kyzo",
+          "intro": "Mascots design, Main Ethyria logo<br>I draw Nijisanji as Cats",
+          "pfp": "kyzo.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/kyzoluxray" }
+          ]
+        },
+        {
+          "name": "Lumier Luodne",
+          "intro": "- Return, credits and BACK button <br>- Central buttons outline design  <br>- Lines first design <br>They asked me to make a return button, I provided.",
+          "pfp": "lumier.png",
+          "contacts": [
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/channel/UCAt7z7b5XnR8pWTutheYAUQ"
+            }
           ]
         }
       ]

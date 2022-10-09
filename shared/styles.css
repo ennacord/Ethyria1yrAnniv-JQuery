@@ -119,7 +119,7 @@ div {
 /* Message.html */
 #messages_scroll_container {
     padding: 0 00px;
-    height: 80%;
+    height: 100%;
 }
 
 #message_scroll {
@@ -129,6 +129,8 @@ div {
     overflow-y: scroll;
     text-align: center;
 }
+
+
 
 #message_scroll::-webkit-scrollbar {
     width: 10px;
@@ -171,11 +173,12 @@ div {
     width: 400px;
     height: 305px;
 
+    /* border: 4px solid yellow; */
+
     margin: 5px;
 
     white-space: pre-line;
     font-weight: 400;
-    /* padding: 6px 20px 10px 20px; */
 
     display: inline-block;
 }
@@ -187,18 +190,18 @@ div {
     z-index: 2;
     white-space: pre-line;
     font-weight: 600;
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     /* background-color: hsla(0, 0%, 100%, .7); */
     border-radius: 10px;
     position: relative;
 
     overflow-y: auto;
-    height: 250px;
 
 }
 
+
 .card_text::-webkit-scrollbar {
-    width: 15px;
+    width: 5px;
     border-radius: 9999px;
 }
 
@@ -213,16 +216,6 @@ div {
 }
 
 
-
-.read_indicator {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    top: -70px;
-    left: -130px;
-    z-index: 1;
-    background-size: contain;
-}
 
 
 
@@ -280,15 +273,25 @@ div {
     }
 }
 
-/* projects.html */
-.test {
-    width: 90vh;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* credits.html*/
-#credits_main {}
+#credits_main {
 
+}
 
 .ui-widget-content {
     /* background: none; */
@@ -309,7 +312,6 @@ div {
 }
 
 /* Set a specific color for each brand */
-
 
 /* Twitter */
 .fa-twitter {
@@ -336,6 +338,21 @@ div {
 }
 
 
+/* instagram */
+.fa-instagram {
+    background: white;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -351,50 +368,77 @@ div {
 }
 
 
-#aggie_main{
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* project.html */
+
+#project_main{
     display:flex;
 }
 
-#aggie_left {
+#project_left {
     border: solid red 3px;
     height: 70vh;
-    width: 30vw;
-    margin-right: 100px;
+    width: 20vw;
 }
-#aggie_right {
+#project_right {
     border: solid red 3px;
-    margin-right: 100px;
     
     height: 70vh;
-    width: 30vw;
+    width: 70vw;
 
     padding: 15px;
 
     display: inline-block;
+    position: relative;
+
+    background-color:  #5a3872;
+
+    border-radius: 20px;
 }
 
 .box_corner{
-    border: solid yellow 3px;
+    /* border: solid yellow 3px; */
     background-repeat: no-repeat;
     background-size: contain;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 
-    position: absolute;
+    position:absolute;
+
 }
 
 .box_topleft{
     background-image: url(../img/box_corner_topleft.png);    
     
-    top: -0px;
-    left: 0px;
+    top: 25px;
+    left: 25px;
+
 }
 .box_topright{
     background-image: url(../img/box_corner_topright.png);    
+    top: 25px;
+    right: 25px;
 }
 .box_bottomleft{
     background-image: url(../img/box_corner_bottomleft.png);    
+    bottom: 25px;
+    left: 25px;
 }
 .box_bottomright{
     background-image: url(../img/box_corner_bottomright.png);    
+    
+    bottom: 25px;
+    right: 25px;
 }

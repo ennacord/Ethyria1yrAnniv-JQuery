@@ -36,38 +36,38 @@
 
         </div>
 
-        <div class="row-sm " id="message_navi_container">
-            <div class="row-sm " id="message_navi">
-                <div id="changeV_e" class="changeV d-inline col-sm" onclick="changeV('e')" style="background-image: url('./img/enna_square_1.png'); 
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                    data-clicked='false'>
-                </div>
-                <div id="changeV_m" class="changeV d-inline col-sm" onclick="changeV('m')" style="background-image: url('./img/millie_square_1.png');
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                    data-clicked='false'>
-                </div>
-                <div id="changeV_n" class="changeV d-inline col-sm" onclick="changeV('n')" style="background-image: url('./img/nina_square_1.png'); 
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                    data-clicked='false'>
-                </div>
-                <div id="changeV_r" class="changeV d-inline col-sm" onclick="changeV('r')" style="background-image: url('./img/reimu_square_1.png'); 
-                    background-size:contain; background-repeat: no-repeat; background-position: center; "
-                    data-clicked='false'>
-                </div>
-            </div>
-            <!-- <div id="message_navi_home" onclick="location.href='./'">
-                <img src="./onetofour.png">
-            </div> -->
-        </div>
+
 
     </div>
 
+
+    <div class="row-sm " id="message_navi_container">
+        <div class="row-sm " id="message_navi">
+            <div id="changeV_e" class="changeV d-inline col-sm" onclick="changeV('e')" style="background-image: url('./img/enna_square_1.png'); 
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                data-clicked='false'>
+            </div>
+            <div id="changeV_m" class="changeV d-inline col-sm" onclick="changeV('m')" style="background-image: url('./img/millie_square_1.png');
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                data-clicked='false'>
+            </div>
+            <div id="changeV_n" class="changeV d-inline col-sm" onclick="changeV('n')" style="background-image: url('./img/nina_square_1.png'); 
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                data-clicked='false'>
+            </div>
+            <div id="changeV_r" class="changeV d-inline col-sm" onclick="changeV('r')" style="background-image: url('./img/reimu_square_1.png'); 
+                    background-size:contain; background-repeat: no-repeat; background-position: center; "
+                data-clicked='false'>
+            </div>
+        </div>
+    </div>
+
+    
     <div id="cns_wrapper" class="">
         <div id="cns" class="">
             BACK &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="../" class="reimu_back"> <img src="./img/reimu_back.png"> </a>
+            <a href="javascript:history.back()"  class="reimu_back"> <img src="./img/reimu_back3.png"> </a>
         </div>
-
     </div>
 
     <script>
@@ -76,7 +76,7 @@
             {   // Enna
                 v: 'e',
                 nav_btn_path: ['enna_square_1.png', 'enna_square_2.png'],
-                card_bg_path: 'EnnaCard.png',
+                card_bg_path: 'EnnaCard3.png',
                 pallet: {
                     main: 'rgba(216,161,236)',
                     card_bi_color: [
@@ -90,7 +90,7 @@
             {   // Millie
                 v: 'm',
                 nav_btn_path: ['millie_square_1.png', 'millie_square_2.png'],
-                card_bg_path: 'MillieCard.png',
+                card_bg_path: 'MillieCard3.png',
                 pallet: {
                     main: 'rgba(255,197,82)',
                     card_bi_color: [
@@ -192,61 +192,248 @@
                                     })['card_bg_path'] + '")',
                                     'background-color': 'transparent',
 
-                                    'background-size': 'contain',
+                                    'background-size': 'cover',
                                     'background-position': 'center',
                                     'background-repeat': 'no-repeat',
+
+                                    'position': 'relative',
 
                                     'color': CONSTANTS.find(constant => {
                                         return constant.v == v
                                     }).pallet.text,
 
-
                                     "padding": function () {
                                         switch (v) {
                                             case 'r':
-                                                return " 5px 5px 7px 5px"
+                                                return " 2px 5px 7px 5px"
                                                 break;
                                             case 'n':
-                                                return " 35px 20px 10px 20px"
+                                                return " 30px 61px 37px 61px"
                                                 break;
                                             case 'e':
-                                                return " 35px 20px 10px 20px"
+                                                return " 25px 27px 7px 41px"
                                                 break;
                                             case 'm':
-                                                return " 35px 20px 10px 20px"
+                                                return " 23px 42px 7px 42px"
                                                 break;
-
                                         }
                                     }
-
 
                                 })
                                     .append(
                                         $('<div>' + e.name + '</div>').addClass('card_name').css({
-                                            "color": "white",
+                                            "color": function () {
+                                                switch (v) {
+                                                    case 'r':
+                                                        return " white"
+                                                        break;
+                                                    case 'n':
+                                                        return " white"
+                                                        break;
+                                                    case 'e':
+                                                        return " 0px"
+                                                        break;
+                                                    case 'm':
+                                                        return " black"
+                                                        break;
+                                                }
+                                            },
                                             "font-weight": "500",
-                                            "text-align": 'center'
+                                            "text-align": 'center',
+
+                                            "padding": function () {
+                                                switch (v) {
+                                                    case 'r':
+                                                        return " 4px 10px"
+                                                        break;
+                                                    case 'n':
+                                                        return " 0px"
+                                                        break;
+                                                    case 'e':
+                                                        return " 0px"
+                                                        break;
+                                                    case 'm':
+                                                        return " 0px"
+                                                        break;
+                                                }
+                                            },
+
                                         })
                                     )
                                     .append(
                                         $('<div >' + e.message + '<br><br><br>' + e.Timestamp + '</div>').addClass('card_text')
                                             .css({
-                                                "margin": function () { (v == 'r') && " 1px 5px 7px 5px" },
-                                                "border": function () { (v == 'r') && " #d0c9c7 6px solid" }
+
+                                                "height": function () {
+                                                    switch (v) {
+                                                        case 'r':
+                                                            return "240px"
+                                                            break;
+                                                        case 'n':
+                                                            return "210px"
+                                                            break;
+                                                        case 'e':
+                                                            return "170px"
+                                                            break;
+                                                        case 'm':
+                                                            return "200px"
+                                                            break;
+                                                    }
+                                                },
+
+                                                "margin": function () {
+                                                    switch (v) {
+                                                        case 'r':
+                                                            return " 1px 19px 7px 19px"
+                                                            break;
+                                                        case 'n':
+                                                            return " 15px "
+                                                            break;
+                                                        case 'e':
+                                                            return " "
+                                                            break;
+                                                        case 'm':
+                                                            return "15px 0px 0px 0px "
+                                                            break;
+                                                    }
+                                                },
+
+                                                "border": function () {
+                                                    switch (v) {
+                                                        case 'r':
+                                                            return "#d0c9c7 6px solid"
+                                                            break;
+                                                        case 'n':
+                                                            return "purple 0px solid"
+                                                            break;
+                                                        case 'e':
+                                                            return "purple 0px solid"
+                                                            break;
+                                                        case 'm':
+                                                            return "purple 0px solid"
+                                                            break;
+                                                    }
+                                                },
+
+                                                "padding": function () {
+                                                    switch (v) {
+                                                        case 'r':
+                                                            return "6px"
+                                                            break;
+                                                        case 'n':
+                                                            return "6px"
+                                                            break;
+                                                        case 'e':
+                                                            return "5px 10px 10px 10px "
+                                                            break;
+                                                        case 'm':
+                                                            return "6px 10px 10px 10px "
+                                                            break;
+                                                    }
+                                                },
+
+
+
+
+                                            })
+                                    )
+                                    .append(
+                                        $('<div></div>').addClass('read_indicator')
+                                            .css({
+                                                'background-image': 'url("./img/read_indicator.png")',
+                                                'background-repeat': 'no-repeat',
+
+
+                                                // 'border': 'solid red 2px',
+
+                                                'width': '90px',
+                                                'height': '30px',
+                                                'position': 'absolute',
+                                                'top': '0px',
+                                                'right': '0px',
+                                                'z-index': '1',
+                                                'background-size': 'contain'
                                             })
                                     )
                                 // .append(
-                                //     $('<div></div>').addClass('read_indicator')
-                                //         .css(
-                                //             'background-image',
-                                //             'url("./img/cardMark.png")'
-                                //         )
+                                //     $('<div></div>').addClass('mascot')
+                                //         .css({
+                                //             'background-image': function () {
+                                //                 switch (v) {
+                                //                     case 'r':
+                                //                         return 'url("./img/mascot_r.png")'
+                                //                         break;
+                                //                     case 'n':
+                                //                         return 'url("./img/mascot_n.png")'
+                                //                         break;
+                                //                     case 'e':
+                                //                         return 'url("./img/mascot_e.png")'
+                                //                         break;
+                                //                     case 'm':
+                                //                         return 'url("./img/mascot_m.png")'
+                                //                         break;
+                                //                 }
+                                //             },
+
+
+                                //             'background-repeat': 'no-repeat',
+
+
+                                //             'border': 'solid red 2px',
+
+                                //             'width': '130px',
+                                //             'height': '130px',
+                                //             'position': 'absolute',
+                                //             'top': '0px',
+                                //             'right': '-70px',
+                                //             'z-index': '4',
+                                //             'background-size': 'contain'
+                                //         })
                                 // )
 
 
                             )
                     })
                 })
+
+            $('.card_text::-webkit-scrollbar-thumb').css({
+                "background-color": function () {
+                    switch (v) {
+                        case 'r':
+                            return
+                            break;
+                        case 'n':
+                            return
+                            break;
+                        case 'e':
+                            return
+                            break;
+                        case 'm':
+                            return "black"
+                            break;
+                    }
+                },
+            });
+
+            $('.card_text::-webkit-scrollbar-thumb').css({
+                "background-color": function () {
+                    switch (v) {
+                        case 'r':
+                            return
+                            break;
+                        case 'n':
+                            return
+                            break;
+                        case 'e':
+                            return
+                            break;
+                        case 'm':
+                            return "yellow"
+                            break;
+                    }
+                },
+            });
+
 
 
         };
@@ -255,14 +442,14 @@
 
 
 
-        changeV(['n'][Math.floor(Math.random() * 1)]);
-        // changeV(['e', 'm', 'n', 'r'][Math.floor(Math.random() * 4)]);
+        // changeV(['n'][Math.floor(Math.random() * 1)]);
+        changeV(['e', 'm', 'n', 'r'][Math.floor(Math.random() * 4)]);
 
 
 
-        $('.read_indicator').on('click', function () {
-            alert($(this).html());
-        });
+        // $('.read_indicator').on('click', function () {
+        //     alert($(this).html());
+        // });
 
 
 

@@ -30,15 +30,19 @@
 
 
     <div class="main">
-        no special charater allowed for contributor.name
+        <!-- no special charater allowed for contributor.name -->
+        <div id="credits_container" class="accordion" style="color: white;max-height: 100%;overflow-y: scroll"></div>
 
-        <div id="credits_container" style="color: white;max-height: 100%;overflow-y: scroll"></div>
+    </div>
 
+
+    <div id="cns_wrapper" class="">
         <div id="cns" class="">
             BACK &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="../" class="reimu_back"> <img src="./img/reimu_back.png"> </a>
+            <a href="javascript:history.back()" class="reimu_back"> <img src="./img/reimu_back3.png"> </a>
         </div>
     </div>
+
 
     <script>
         fetch("./data/credits/credits.json")
@@ -46,14 +50,25 @@
             .then(data => {
                 const departments = data['departments'];
                 departments.map(department => {
-                    $('#credits_container').append(
-                        $('<div><h3>' + department.department + '</h3></div>')
-                            .addClass('credit_department')
-                            .attr('id', department.department)
-                            .css({
-                                'display': 'flexbox'
-                            })
-                    );
+                    $('#credits_container')
+                        .append(
+                            $('<div class="mb-4">'
+                                + '<button class="btn btn-light" type="button" data-toggle="collapse" '
+                                + 'data-target="#' + department.department + '" aria-expanded="false" aria-controls="collapseTwo">'
+                                + '<h2>' + department.department + '</h2></button>'
+                                + '<div>')
+                        )
+                        .append(
+                            $('<div>'
+                                + '</div>')
+                                .addClass('credit_department collapse ' +
+                                    (department.department == 'Management' ? 'show' : 'collapsed')
+                                )
+                                .attr({ 'id': department.department, "data-parent": "#credits_container" })
+                                .css({
+                                    'display': 'flexbox'
+                                })
+                        );
                     department['contributors'].map(contributor => { // like cards
                         $('#' + department.department)
                             .css({
@@ -62,19 +77,19 @@
                             .append(
                                 $('<div></div>')
                                     .addClass('credits_contributor_container').css({
-                                        'margin': '20px',
+                                        'margin': '10px',
                                         'text-align': 'center',
-                                        'display': 'inline-block',
+                                        'display': 'inline-table',
                                         'padding': '10px',
 
-                                        'width': '250px',
-                                        'background-color': contributor.bgcolor,
+                                        'width': '290px',
+                                        'background-color': contributor.name == 'Bettiepop' && contributor.bgcolor,
 
-                                        'background-image': 'url("' + data['pfp_paths'] + contributor.bgimg + '")',
+                                        'background-image': contributor.name == 'Bettiepop' && 'url("' + data['pfp_paths'] + contributor.bgimg + '")',
                                         "background-size": 'contain',
                                         'background-repeat': 'no-repeat',
 
-                                        'border': 'solid 5px ' + (!contributor.border && 'white'),
+                                        'border': 'solid 3px ' + (contributor.border ? 'none' : 'white'),
                                     })
                                     .append(
                                         $('<div></div>').css({
@@ -103,7 +118,7 @@
                                             .append(
                                                 $('<div></div>')
                                                     .addClass('credits_contributor_intro')
-                                                    .text(contributor['intro'])
+                                                    .append(contributor['intro'])
                                             )
                                             .append(
                                                 $('<div></div>')
@@ -127,7 +142,9 @@
                     })
                 })
 
-            })
+            });
+
+
 
     </script>
 
