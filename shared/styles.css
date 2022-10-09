@@ -540,24 +540,26 @@ div {
 
 
 
-#project_col4 {
+/* #project_col4 {
     width: 3vw;
     border: solid red 3px;
-    padding-top: 1vh;
-}
+} */
 .dot {
     width: 3vh;
     height: 3vh;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 1vh;
     text-align: center;
     border: solid red 3px;
     border-radius: 100%;
 }
 #project_col5 {
-    border: solid red 3px;
+    /* border: solid red 3px; */
 
-    width: 9vw;
+    padding-top: 4vh;
+    padding-left: 1vh;
+
+    width: 12vw;
     height: 90vh;
 
     text-align: right;
