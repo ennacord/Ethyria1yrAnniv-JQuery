@@ -6,7 +6,7 @@ body {
 }
 
 div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .reimu_back img {
@@ -69,6 +69,16 @@ div {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* index.html */
 
 .index {
@@ -118,6 +128,23 @@ div {
     padding: 50px;
     border-radius: 50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -300,10 +327,15 @@ div {
 
 
 
-/* credits.html*/
-#credits_main {
 
-}
+
+
+
+
+
+
+/* credits.html*/
+#credits_main {}
 
 .ui-widget-content {
     /* background: none; */
@@ -324,7 +356,6 @@ div {
 }
 
 /* Set a specific color for each brand */
-
 /* Twitter */
 .fa-twitter {
     background: blue;
@@ -349,12 +380,33 @@ div {
     color: red;
 }
 
-
 /* instagram */
 .fa-instagram {
     background: white;
     color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -393,64 +445,148 @@ div {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* project.html */
 
-#project_main{
-    display:flex;
+#project_main {
+    display: flex;
 }
 
-#project_left {
-    border: solid red 3px;
+.project_col {
     height: 70vh;
-    width: 20vw;
+    /* border: solid red 3px; */
+    position: sticky;
+
+    margin-top: 7vh;
 }
-#project_right {
-    border: solid red 3px;
+
+#project_col1 {
+    width: 8vw;
+}
+
+#project_col2 {
+    width: 18vw;
+    text-align: start;
+}
+
+#project_col3 {
+    width: 60vw;
+    height: 100vh;
+
+    margin-top: 0vh;
+    padding: 7vh 0vh 23vh 0vh;
     
-    height: 70vh;
-    width: 70vw;
+    overflow: hidden;
 
-    padding: 15px;
+}
+#project_col3_scroll{
+    padding: 7vh 0vh 23vh 0vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -19px; /* Increase/Decrease this value for cross-browser compatibility */
+    overflow-y: scroll;
+}
 
+#project_col3_dashed {
     display: inline-block;
     position: relative;
-
-    background-color:  #5a3872;
-
+    background-color: #5a3872;
     border-radius: 20px;
+    border: dashed 7px white;
+    padding: 7px;
 }
 
-.box_corner{
+#project_col3_dotted {
+    height: 100%;
+    width: 100%;
+    border: dotted 4px white;
+    border-radius: 9px;
+    padding: 70px;
+}
+
+#project_col3_content{
+    border: red 3px dotted;
+
+    text-align: center;
+}
+
+
+
+#embed_container {
+    border: yellow 2px solid;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#project_col4 {
+    width: 3vw;
+}
+#project_col5 {
+    width: 11vw;
+    height: 100vh;
+    margin-top: 0vh;
+    padding: 7vh 0vh 23vh 0vh;
+    overflow: auto;
+
+}
+
+
+.box_corner {
     /* border: solid yellow 3px; */
     background-repeat: no-repeat;
     background-size: contain;
     height: 100px;
     width: 100px;
 
-    position:absolute;
-
+    position: absolute;
 }
 
-.box_topleft{
-    background-image: url(../img/box_corner_topleft.png);    
-    
+.box_topleft {
+    background-image: url(../img/box_corner_topleft.png);
     top: 25px;
     left: 25px;
-
 }
-.box_topright{
-    background-image: url(../img/box_corner_topright.png);    
+
+.box_topright {
+    background-image: url(../img/box_corner_topright.png);
     top: 25px;
     right: 25px;
 }
-.box_bottomleft{
-    background-image: url(../img/box_corner_bottomleft.png);    
+
+.box_bottomleft {
+    background-image: url(../img/box_corner_bottomleft.png);
     bottom: 25px;
     left: 25px;
 }
-.box_bottomright{
-    background-image: url(../img/box_corner_bottomright.png);    
-    
+
+.box_bottomright {
+    background-image: url(../img/box_corner_bottomright.png);
+
     bottom: 25px;
     right: 25px;
 }
