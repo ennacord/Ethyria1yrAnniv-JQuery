@@ -162,7 +162,10 @@
                         return constant.v == $(this).attr('id').slice(-1)
                     })['nav_btn_path'][1] + '")',
                 });
+
+
             }
+
         );
 
         // maybe download all 4 json then just switch....
@@ -176,6 +179,7 @@
                     return constant.v == v
                 })['nav_btn_path'][1] + '")',
             });
+            $('#message_list').empty();
             $('#message_list').empty();
 
             fetch("./data/messages/csvjson.json")
@@ -406,7 +410,7 @@
             $('div').on('click', function (event) {
                 // console.log(event.target);
                 let t = event.target;
-                while (t.className != 'card') {
+                while (t && t.className != 'card') {
                     t = t.parentNode
                 }
                 // console.log(t.id);
@@ -454,7 +458,6 @@
             //         }
             //     },
             // });
-
 
 
         };

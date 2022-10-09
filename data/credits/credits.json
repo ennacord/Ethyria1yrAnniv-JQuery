@@ -24,7 +24,10 @@
           "intro": "Arts, Cosplay",
           "pfp": "e06fdf82-2164-46e7-b041-7e1ee527fb3b.png",
           "contacts": [
-            {"platform": "youtube","href": "https://www.youtube.com/channel/UCNjtRqxra6cZ27uUuP5x5HQ"},
+            {
+              "platform": "youtube",
+              "href": "https://www.youtube.com/channel/UCNjtRqxra6cZ27uUuP5x5HQ"
+            },
             { "platform": "coffee", "href": "https://ko-fi.com/mataharigoreng" }
           ]
         },
@@ -41,134 +44,42 @@
     {
       "department": "CONNECTING_-_Project_Lead_and_Project_Manager",
       "contributors": [
-        {"name": "MatahariGoreng", "pfp": "matahari.jpg","intro":"Project_Lead","contacts": [{"platform": "twitter","href": "https://twitter.com/mataharigoreng"}]},
-        {"name":"Bettiepop","pfp":"bettiepop_pfp.png","contacts":[{ "platform": "twitter", "href": "https://twitter.com/bettiepop" }],
-        "intro": "Project_Manager <br> I just doodle and vibe c:","border": "rgba(51,37,73,1)","bgcolor": "rgba(109,169,157,1)","bgimg": "bettiepop_background.jpg"},
-        {"name":"Chu2neko","pfp":"cuni.jpg","intro":"Project Manager","contacts":[{ "platform":"twitter","href":"https://twitter.com/chu2neko"}]},
+        {
+          "name": "MatahariGoreng",
+          "pfp": "matahari.jpg",
+          "intro": "Project_Lead",
+          "contacts": [
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/mataharigoreng"
+            }
+          ]
+        },
+        {
+          "name": "Bettiepop",
+          "pfp": "bettiepop_pfp.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/bettiepop" }
+          ],
+          "intro": "Project_Manager <br> I just doodle and vibe c:",
+          "border": "rgba(51,37,73,1)",
+          "bgcolor": "rgba(109,169,157,1)",
+          "bgimg": "bettiepop_background.jpg"
+        },
+        {
+          "name": "Chu2neko",
+          "pfp": "cuni.jpg",
+          "intro": "Project Manager",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/chu2neko" }
+          ]
+        },
         {
           "name": " jetrico",
           "intro": "Small thanks to Jetrico__ for initiating this project back in February and Enna's Angelic Teahouse mods also being supportive & helpful behind the scenes.",
           "pfp": "jetri.jpg",
           "contacts": []
         }
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Vocalists",
-      "contributors":[
-        {"name":"Senno","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/SeSeSenno"}]},
-        {"name":"Bettiepop ","pfp":"","contacts":[{ "platform": "twitter", "href": "https://twitter.com/bettiepop" }]},
-        {"name":"Rin","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Rin_isRin"}]},
-        {"name":"Hel","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/helrouis"}]},
-        {"name":"Cloud","pfp":"","contacts":[{ "platform":"youtube","href":"https://youtube.com/channel/UCxmwXeMPAFu7yb73y2poyzg"}]},
-        {"name":"hiya_kk","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/hiya_kk"}]},
-        {"name":"Tubbsies","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/tubbsies"}]},
-        {"name":"Professor","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/nobu_okt"}]},
-        {"name":"Koshka","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/KoshkaSova"}]},
-        {"name":"Puddle","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/PuddleZuto"}]},
-        {"name":"Meri","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/merikyun"}]},
-        {"name":"Dippy","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/simpdesuadero"}]},
-        {"name":"Norenche ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Norenche"}]},
-        {"name":"Rei","pfp":"","contacts":[{ "platform":"youtube","href":"https://youtube.com/channel/UCYQLTlrPBmV8wMy1diWqbg"}]},
-        {"name":"Matahari ","pfp":"","contacts":[{"platform": "twitter","href": "https://twitter.com/mataharigoreng"}]},
-        {"name":"Reign","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/ReignScarlet_"}]},
-        {"name":"matcha","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/matchaz3112"}]},
-        {"name":"Aicia","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/pato_rishia"}]},
-        {"name":"Casino","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/SLNCasino"}]},
-        {"name":"Asura","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/asurarara"}]},
-        {"name":"MinniJay","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/MinniJay"}]},
-        {"name":"Vince","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]},
-        {"name":"KK","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/katchukatchu"}]},
-        {"name":"Lili","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/tsukuromi"}]},
-        {"name":"Jetrico","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/jetri_co"}]},
-        {"name":"Chi","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/chithanhhhh"}]},
-        {"name":"Kalmen","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/DerKalmen"}]},
-        {"name":"Nuit","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/_N_u_i_t_"}]},
-        {"name":"Sasu","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Sasu_Crow"}]},
-        {"name":"Luna","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/LunaAsena"}]},
-        {"name":"Stellia ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/stelli_a"}]},
-        {"name":"Hao","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/ItsHaoHere"}]},
-        {"name":"Seph","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/sephyrothsus"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_MV_StoryBoard",
-      "contributors":[
-        {"name":"Mana","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/manamm_art"}]},
-        {"name":"Hazel","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/HazelSokolov"}]},
-        {"name":"Leef","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Leef_is_Absent"}]},
-        {"name":"MinniJay ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/MinniJay"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Artists",
-      "contributors":[
-        {"name":"Ino","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/inolccp"}]},
-        {"name":"Ikaarus","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/_ikaanaide_"}]},
-        {"name":"Trisha","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/kuuryusi"}]},
-        {"name":"Bam","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/bluebepo"}]},
-        {"name":" MinniJay","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/MinniJay"}]},
-        {"name":" Matahari","pfp":"","contacts":[{"platform": "twitter","href": "https://twitter.com/mataharigoreng"}]},
-        {"name":" Bettiepop","pfp":"","contacts":[{ "platform": "twitter", "href": "https://twitter.com/bettiepop" }]},
-        {"name":"Boeu","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/BOEUBEI"}]},
-        {"name":"Reign ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/ReignScarlet_"}]},
-        {"name":"Keektang","pfp":"","contacts":[{ "platform":"youtube","href":"https://www.youtube.com/channel/UCEESbhamgDaiRtS8JXpHgTA"}]},
-        {"name":"Hazel ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/HazelSokolov"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Video",
-      "contributors":[
-        {"name":"Stellia","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/stelli_a"}]},
-        {"name":"Lance","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/atomicxlancer"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Clips_in_Video",
-      "contributors":[
-        {"name":"Orangehenge","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Alpha_Hatsuseno"}]},
-        {"name":"Ennas","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/EnnaVirus"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Teaser",
-      "contributors":[
-        {"name":"reF","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/UguyRananif"}]},
-        {"name":"Vince ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]}
-      
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Mix",
-      "contributors":[
-        {"name":" Vince","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]},
-        {"name":"Breeziness","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/itsbreeziness"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Harmony_guide",
-      "contributors":[
-        {"name":"Sasu ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/Sasu_Crow"}]},
-        {"name":" Vince ","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/krimso_73"}]}
-
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Youtube_Subtittles",
-      "contributors":[
-        {"name":"JDaniel","pfp":"","contacts":[{ "platform":"twitter","href":"https://twitter.com/jdanielo64"}]}
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Translyrics",
-      "contributors":[
-
-      ]
-    },
-    {
-      "department":"CONNECTING_-_Cheerleader",
-      "contributors":[
-        {"name":"Heko","pfp":"","contacts":[]}
       ]
     },
     {
@@ -185,7 +96,7 @@
         {
           "name": " Bettiepop ",
           "pfp": "bettiepop_pfp.png",
-          
+
           "contacts": [
             { "platform": "twitter", "href": "https://twitter.com/bettiepop" }
           ]
@@ -392,20 +303,55 @@
               "href": "https://www.youtube.com/channel/UCAt7z7b5XnR8pWTutheYAUQ"
             }
           ]
+        },
+        {
+          "name": "Luca",
+          "intro": "Button illustration credits (UI) <br> I can do 2d character art!",
+          "pfp": "luca.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/mono_luca" }
+          ]
         }
       ]
     },
     {
-      "department": "Others",
+      "department": "Message_Card_Design",
       "contributors": [
         {
-          "name": "sample name 4",
-          "intro": "I can do xx",
-          "pfp": "",
+          "name": "鈴片しぞ",
+          "intro": "Illustrator and comics artist, mostly character-focused",
+          "pfp": "suzuhirashizo.png",
           "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com" },
-            { "platform": "youtube", "href": "https://youtube.com" },
-            { "platform": "github", "href": "https://github.com" }
+            {
+              "platform": "twitter",
+              "href": "https://twitter.com/SuzuhiraShizo"
+            },
+            {
+              "platform": "instagram",
+              "href": "http://instagram.com/suzuhirashiz/"
+            }
+          ]
+        },
+        {
+          "name": "RileyA",
+          "intro": "Millie's illustration <br>I sketch my fave vtubers",
+          "pfp": "riley.png",
+          "contacts": [{ "platform": "twitter", "href": "https://twitter.com/ReimusMongrel" }]
+        },
+        {
+          "name": "Luca ",
+          "intro": " Enna and Nina's illustration <br> I can do 2d character art!",
+          "pfp": "luca.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/mono_luca" }
+          ]
+        },
+        {
+          "name": "Donna",
+          "intro": "Reimu's Illustration <br> I do art sometimes once a year",
+          "pfp": "donna.png",
+          "contacts": [
+            { "platform": "twitter", "href": "https://twitter.com/DonnaDonera" }
           ]
         }
       ]
