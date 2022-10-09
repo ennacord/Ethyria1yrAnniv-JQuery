@@ -467,6 +467,7 @@ div {
 
 #project_main {
     display: flex;
+    color: white;
 }
 
 .project_col {
@@ -502,7 +503,7 @@ div {
     top: 0;
     bottom: 0;
     left: 0;
-    right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
+    right: -px; /* Increase/Decrease this value for cross-browser compatibility */
     overflow-y: scroll;
 }
 
@@ -545,14 +546,21 @@ div {
     border: solid red 3px;
 } */
 .dot {
-    width: 3vh;
-    height: 3vh;
+    /* width: 3vh; */
+    /* height: 3vh; */
     /* margin: auto; */
     margin-top: 1vh;
     text-align: center;
-    border: solid red 3px;
-    border-radius: 100%;
+    /* border: solid red 3px; */
+    background-color: white;
+    color: black;
+    border-radius: 0.5vw;
 }
+
+.dot:hover{
+    opacity: 0.6;
+}
+
 #project_col5 {
     /* border: solid red 3px; */
 
@@ -564,6 +572,12 @@ div {
 
     text-align: right;
 }
+
+.project_dot_n_title{
+    display: inline-table;
+    text-align: left;
+}
+
 .project_reimu_back {
     position: absolute;
     bottom: 0;
