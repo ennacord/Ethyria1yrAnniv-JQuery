@@ -619,3 +619,8 @@ div {
     bottom: 25px;
     right: 25px;
 }
+
+.temp_messsage_img{
+    margin: 10px;
+    width: 300px;
+}
