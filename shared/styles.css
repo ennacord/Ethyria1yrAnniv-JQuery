@@ -93,6 +93,7 @@ div {
 
     background-image: url('../img/bg_index.png');
     background-repeat: no-repeat;
+
 }
 
 #center_navi_container {
@@ -129,6 +130,15 @@ div {
     border-radius: 50%;
 }
 
+.index_message{
+    /* border: 4px red solid; */
+    width: 90vw;
+    position:absolute;
+    color: white;
+    font-weight: 100;
+    margin: auto;
+    text-align: center;
+}
 
 
 
