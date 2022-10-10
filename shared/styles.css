@@ -5,9 +5,9 @@ body {
     color: yellow;
 }
 
-div {
-    /* border: 1px solid red; */
-}
+/* div {
+    border: 0px solid red;
+} */
 
 .reimu_back img {
     height: 100px;
@@ -131,11 +131,15 @@ div {
 }
 
 .index_message{
-    /* border: 4px red solid; */
+    border: 3px white solid;
+    padding: 10px 15px 5px 17px;
+    background-color: #4e3062;
+    color: #fbe3d7;
     width: 25vw;
+    border-radius: 25px;
     top: 5vw;
     position:absolute;
-    color: white;
+    color: #fbe3d7;
     font-weight: 100;
     margin: auto;
     /* text-align: center; */
@@ -343,11 +347,6 @@ div {
 
 
 /* credits.html*/
-#credits_main {}
-
-.ui-widget-content {
-    /* background: none; */
-}
 
 /* Style all font awesome icons */
 .fa {
