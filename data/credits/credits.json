@@ -306,7 +306,7 @@
         },
         {
           "name": "Luca",
-          "intro": "Button illustration credits (UI) <br> I can do 2d character art!",
+          "intro": "Button illustration credits (UI) <br> Enna and Nina's illustration <br>I can do 2d character art!",
           "pfp": "luca.png",
           "contacts": [
             { "platform": "twitter", "href": "https://twitter.com/mono_luca" }
@@ -336,14 +336,6 @@
               "platform": "twitter",
               "href": "https://twitter.com/ReimusMongrel"
             }
-          ]
-        },
-        {
-          "name": "Luca ",
-          "intro": " Enna and Nina's illustration <br> I can do 2d character art!",
-          "pfp": "luca.png",
-          "contacts": [
-            { "platform": "twitter", "href": "https://twitter.com/mono_luca" }
           ]
         },
         {
