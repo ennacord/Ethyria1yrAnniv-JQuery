@@ -5,9 +5,9 @@ body {
     color: yellow;
 }
 
-/* div {
-    border: 0px solid red;
-} */
+div {
+    /* border: 2px solid red; */
+}
 
 .reimu_back img {
     height: 100px;
@@ -496,6 +496,12 @@ body {
 #project_col2 {
     width: 18vw;
     text-align: start;
+
+    display: inline-flex;
+}
+
+.project_col2_2{
+
 }
 
 #project_col3 {
