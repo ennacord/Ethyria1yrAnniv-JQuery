@@ -33,7 +33,7 @@ div {
     width: 1536px;
 
     background-image: url('../img/bg_main.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
