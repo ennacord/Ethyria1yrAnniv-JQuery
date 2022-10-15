@@ -104,7 +104,10 @@
                                 <h1>PROJECT: Teaser</h1>
                                 <br>
                                 <div class="embed_container">
-                                    <iframe width="100%" height="562" src="https://www.youtube-nocookie.com/embed/sEXejtxgoKg" title="YouTube video player" frameborder="0"
+                                    <!-- <iframe width="100%" height="562" src="https://www.youtube-nocookie.com/embed/sEXejtxgoKg" title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+                                    <iframe width="100%" height="562" src="https://www.youtube-nocookie.com/embed/9Trw7kvviS8" title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <br>
@@ -227,8 +230,49 @@
                             </div>
 
 
-                            <div class="project_n project" style="display:none">
-                                nina project n1
+                            <div class="project_n project" style="display:none;">
+
+                                <div style="
+                                    position: absolute;
+                                    width: calc(100% - 160px);         
+                                    height: calc(100% - 160px); 
+                                    z-index: 6;
+                                    
+                                    background-color: white;
+                                    opacity: 0;
+
+                                    -webkit-clip-path: polygon(
+                                        /* 0 0, 0 50%, */
+
+                                        49% 51%, 
+                                        59% 59%, 
+                                        53% 64%, 
+                                        43% 59%
+
+                                        /* ,100% 100% */
+                                    );
+                                    clip-path: polygon(
+                                        /* 0 0, 0 50%, */
+                                        
+                                        49% 51%, 
+                                        59% 59%, 
+                                        53% 64%, 
+                                        43% 59%
+
+                                       /* ,50% 100% ,100% 100% */
+
+                                    );
+
+                                    " onmouseover="$(this).css({opacity: 0.9})" onmouseleave="$(this).css({opacity: 0})" onclick="$('.project_n1_data1').toggle()"></div>
+
+                                <div style="width: 100%; position: inherit;">
+                                    <img class="project_n1_data1" src="./data/projects/nina_n1/Nina_Project_Page_Message.png" style="width: 100%;display: none;">
+                                    <img class="project_n1_data1" src="./data/projects/nina_n1/Nina_Project_Page_Front.png" style="width: 100%;">
+                                </div>
+
+
+
+
                             </div>
 
                             <div class="project_e project">
@@ -646,7 +690,7 @@
         }
 
 
-        // changeV('r');
+        changeV('n');
 
 
     </script>
