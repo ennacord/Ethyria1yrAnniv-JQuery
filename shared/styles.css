@@ -105,6 +105,11 @@ div {
 #center_navi {
     height: 100%;
     margin: auto;
+
+    
+    /* background-image: url('../img/bg_index.png');
+    background-repeat: no-repeat;
+    background-position: center; */
 }
 
 .cell_content {
@@ -135,7 +140,7 @@ div {
     padding: 10px 15px 5px 17px;
     background-color: #4e3062;
     color: #fbe3d7;
-    width: 25vw;
+    width: 23vw;
     border-radius: 25px;
     top: 5vw;
     position:absolute;
@@ -143,11 +148,33 @@ div {
     font-weight: 100;
     margin: auto;
     /* text-align: center; */
-    font-size: large;
+    font-size: medium;
 }
 
 
+.faf{
+    /* border: 3px white solid; */
+    color: #fbe3d7;
+    top: 4vw;
+    right: 10vw;
+    position:absolute;
+    color: #fbe3d7;
+    font-weight: 100;
+    margin: auto;
+    font-size: medium;
 
+    transform: rotate(10deg);
+}
+
+.faf:hover {
+    opacity: 0.6;
+    transform: rotate(20deg);
+}
+
+.modal {
+    width: 900px;
+    height: 900px;
+}
 
 
 

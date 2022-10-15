@@ -95,6 +95,12 @@
                 </p>
             </div>
 
+            <div class="faf">
+                <img src="./img/FAMILY_AND_FRIENDS_thumbnail2.png" width="300px">
+            </div>
+
+
+
         </div>
 
 
@@ -151,10 +157,10 @@
         );
 
         $('#btn_e').on('click', () => {
-            $('#center_navi').animate({
+            $('.index').animate({
                 'margin-top': '-100px'
             }, 200, () => {
-                $('#center_navi').animate({
+                $('.index').animate({
                     'margin-top': '1000px'
                 }, 300, () => {
                     location.href = './messages.html';
@@ -166,10 +172,10 @@
         });
 
         $('#btn_r').on('click', () => {
-            $('#center_navi').animate({
+            $('.index').animate({
                 'margin-top': '100px'
             }, 200, () => {
-                $('#center_navi').animate({
+                $('.index').animate({
                     'margin-top': '-1000px'
                 }, 300, () => {
                     location.href = './magazine.html';
