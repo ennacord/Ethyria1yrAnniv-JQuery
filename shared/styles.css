@@ -353,9 +353,10 @@ div {
     padding: 10px;
     font-size: 25px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none; 
     border-radius: 50%;
 }
+
 
 /* Add a hover effect if you want */
 .fa:hover {
@@ -389,6 +390,24 @@ div {
 
 /* instagram */
 .fa-instagram {
+    background: white;
+    color: black;
+}
+
+/* tiktok */
+.fa-tiktok {
+    background: black;
+    color: white;
+}
+
+/* reddit */
+.fa-reddit-alien {
+    background: rgba(255, 69, 0);
+    color: white;
+}
+
+/* twitch */
+.fa-twitch {
     background: white;
     color: black;
 }
