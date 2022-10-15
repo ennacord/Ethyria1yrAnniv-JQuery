@@ -152,7 +152,7 @@ div {
 }
 
 
-.faf{
+.faf_toggle{
     /* border: 3px white solid; */
     color: #fbe3d7;
     top: 4vw;
@@ -166,10 +166,25 @@ div {
     transform: rotate(10deg);
 }
 
-.faf:hover {
+.faf_toggle:hover {
     opacity: 0.6;
     transform: rotate(20deg);
 }
+
+
+
+.faf_content{
+    /* border: 3px white solid; */
+    color: #fbe3d7;
+    top: 4vw;
+    right: 10vw;
+    position:absolute;
+    color: #fbe3d7;
+    font-weight: 100;
+
+}
+
+
 
 
 

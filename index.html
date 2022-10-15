@@ -95,10 +95,27 @@
                 </p>
             </div>
 
-            <div class="faf">
-                <img src="./img/FAMILY_AND_FRIENDS_thumbnail2.png" width="250px">
+            <div class="faf_toggle" >
+                <img src="./img/index/FAMILY_AND_FRIENDS_thumbnail2.png" width="250px">
             </div>
 
+            <div class="faf_content" style=" display: none; border: 2px white solid;">
+                <img src="./img/index/2000px_FAMILY_AND_FRIENDS.png" style="width: 80vw; ">
+            </div>
+
+            <script>
+                $('.faf_toggle').click(function(){
+                    $('.faf_content').fadeIn();
+                    return false;
+                })
+
+                $('.index').click(function(){
+                    $('.faf_content').fadeOut();
+                    return false;
+                })
+
+                
+            </script>
 
 
         </div>
